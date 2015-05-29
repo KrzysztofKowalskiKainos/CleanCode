@@ -23,7 +23,7 @@ namespace CleanCode.SolidPrinciples
 
         public string GenerateLaugh(int nrOfTimes)
         {
-            return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes)));
+            return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
         }
 
         public int CountReferences(string inputString)
