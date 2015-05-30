@@ -45,6 +45,7 @@
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
     <Compile Include="DependencyInversion\IPrinter.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
+    <Compile Include="InterfaceSegregation\ILobby.cs" />
     <Compile Include="InterfaceSegregation\ILobbyMessages.cs" />
     <Compile Include="InterfaceSegregation\ILobbyPlayers.cs" />
     <Compile Include="InterfaceSegregation\Request.cs" />
