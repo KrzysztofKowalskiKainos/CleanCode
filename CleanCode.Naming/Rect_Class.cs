@@ -5,14 +5,14 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class RectClass
+    class Rect
     {
         private int _firstSide;     // First side
         private int _secondSide;    // Second side
 
         private DateTime _creationDate;
 
-        public RectClass(int firstSide, int secondSide)
+        public Rect(int firstSide, int secondSide)
         {
             _firstSide = firstSide;
             _secondSide = secondSide;
