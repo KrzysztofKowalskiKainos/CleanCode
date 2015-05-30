@@ -8,5 +8,6 @@ namespace CleanCode.SolidPrinciples.Liskov
 {
     interface IWalker
     {
+        void Walk();
     }
 }
