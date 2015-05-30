@@ -9,13 +9,13 @@ namespace CleanCode.Naming
     {
         private int _firstSide;
         private int _secondSide;
-        private DateTime _currentDate;
+        private DateTime _creationDate;
 
         public Rectangle(int firstSide, int secondSide)
         {
             _firstSide = firstSide;
             _secondSide = secondSide;
-            _currentDate = DateTime.Now;
+            _creationDate = DateTime.Now;
         }
 
         public int getField()
@@ -25,7 +25,7 @@ namespace CleanCode.Naming
 
         public int getDuration(bool inSeconds)
         {
-            var duration = (_currentDate - DateTime.Now);
+            var duration = (_creationDate - DateTime.Now);
 
             if (inSeconds)
             {
