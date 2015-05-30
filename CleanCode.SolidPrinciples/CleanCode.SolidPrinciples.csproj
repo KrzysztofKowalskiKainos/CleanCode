@@ -45,9 +45,9 @@
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
     <Compile Include="DependencyInversion\IPrinter.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
-    <Compile Include="InterfaceSegregation\IAllPlayersActions.cs" />
+    <Compile Include="InterfaceSegregation\ILobbyAllPlayersActions.cs" />
     <Compile Include="InterfaceSegregation\ILobbyMessageActions.cs" />
-    <Compile Include="InterfaceSegregation\ISinglePlayerActions.cs" />
+    <Compile Include="InterfaceSegregation\ILobbySinglePlayerActions.cs" />
     <Compile Include="Liskov\Runner.cs" />
     <Compile Include="Liskov\TexasRanger.cs" />
     <Compile Include="Liskov\Walker.cs" />

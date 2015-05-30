@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    interface ISinglePlayerActions
+    interface ILobbySinglePlayerActions
     {
         void AddPlayer(string newPlayer);
 
