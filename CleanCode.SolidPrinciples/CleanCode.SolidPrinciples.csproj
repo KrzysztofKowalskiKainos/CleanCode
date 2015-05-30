@@ -59,7 +59,8 @@
     <Compile Include="OpenClosed\Place\Ocean.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingleResponsibility\StringHolidaysUtils.cs" />
+    <Compile Include="SingleResponsibility\HolidayLaugh.cs" />
+    <Compile Include="SingleResponsibility\Holidays.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -3,23 +3,16 @@ using System.Text.RegularExpressions;
 
 namespace CleanCode.SolidPrinciples
 {
-    class StringHolidaysUtils
+    class Holidays
     {
-        private string _laughSound;
         private string[] _references;
 
         public string HolidayName { get; private set; }
 
-        public StringHolidaysUtils(string holidayName, string laugh, params string[] references)
+        public Holidays(string holidayName, params string[] references)
         {
-            _laughSound = laugh;
             HolidayName = holidayName;
             _references = references;
-        }
-
-        public string GenerateLaugh(int nrOfTimes)
-        {
-            return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
         }
 
         public int CountReferences(string inputString)
