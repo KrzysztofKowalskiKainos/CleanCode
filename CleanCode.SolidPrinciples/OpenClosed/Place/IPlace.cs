@@ -3,5 +3,7 @@
     public interface IPlace
     {
         bool Observe(string environment);
+
+        string Sound();
     }
 }

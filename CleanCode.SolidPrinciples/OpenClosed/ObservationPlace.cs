@@ -4,12 +4,17 @@ namespace CleanCode.SolidPrinciples
 {
     public class ObservationPlace
     {
-        private string Environment { get; set; }
-        private IPlace Place { get; set; }
+        private string environment { get; set; }
+        private IPlace place { get; set; }
+
+        internal string Sound()
+        {
+            return place.Sound();
+        }
 
         internal bool Observe()
         {
-           return Place.Observe(this.Environment);
+           return place.Observe(this.environment);
         }
     }
 }
