@@ -14,17 +14,29 @@ namespace CleanCode.SolidPrinciples
             //Liskov
 
             TexasRanger tR = new TexasRanger();
-            tR.Walk();
-            tR.Run();
+            
             tR.DoRoundHouseKick();
 
             Console.WriteLine("TexasRanger utworzony");
-
+            
 
             //Single Responsibility
 
 
 
+            //Dependancy Inversion !
+
+            // Copying machine dostaje drukarkę (Printer) jaką tam sobie zażyczymy - wygodne !
+            // Zmienna w  typie interfejsu Ipreinter
+
+            IPrinter printer = new Printer();
+            //IPrinter printer = new RichPrinter();
+            CopyingMachine copy = new CopyingMachine(printer);
+            copy.Copy("maciek", 3);
+
+
+
+            Console.ReadLine();
 
         }
     }

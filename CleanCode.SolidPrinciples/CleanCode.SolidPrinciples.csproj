@@ -45,6 +45,7 @@
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
     <Compile Include="DependencyInversion\IPrinter.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
+    <Compile Include="DependencyInversion\RichPrinter.cs" />
     <Compile Include="InterfaceSegregation\ILobby.cs" />
     <Compile Include="Liskov\Runner.cs" />
     <Compile Include="Liskov\TexasRanger.cs" />

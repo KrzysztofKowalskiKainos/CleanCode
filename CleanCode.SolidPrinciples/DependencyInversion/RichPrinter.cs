@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples
 {
-    public interface IPrinter
+    class RichPrinter : IPrinter
     {
-        void Print(string Message);
+        public void Print(string message)
+        {
+            Console.WriteLine("!!!" + message);
+        }
     }
 }
