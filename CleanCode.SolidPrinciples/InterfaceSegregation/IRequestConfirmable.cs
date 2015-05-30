@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    public interface IRequestConfirmable
     {
-        void AllIn();
-        void AllOut();
-
-        void AddPlayer(string newPlayer);
-        void KickPlayer(string player);
+        Response Answer(Request request);
+        void Confirm(Request request);
     }
 }
