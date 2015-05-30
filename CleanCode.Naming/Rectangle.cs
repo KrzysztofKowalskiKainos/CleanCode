@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class RectClass
+    class Rectangle
     {
         // First side
         private int _SideALength;
@@ -18,7 +18,7 @@ namespace CleanCode.Naming
 
         public bool DisplayType {get; set;}
 
-        public RectClass(int a, int b)
+        public Rectangle(int a, int b)
         {
             _SideALength = a;
             SideBLength = b;
