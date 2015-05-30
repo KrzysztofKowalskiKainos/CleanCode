@@ -46,8 +46,10 @@
     <Compile Include="DependencyInversion\IPrintingDevice.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
     <Compile Include="InterfaceSegregation\ILobby.cs" />
-    <Compile Include="InterfaceSegregation\IPlayer.cs" />
+    <Compile Include="InterfaceSegregation\IPlayerTime.cs" />
     <Compile Include="InterfaceSegregation\IRespondable.cs" />
+    <Compile Include="InterfaceSegregation\Request.cs" />
+    <Compile Include="InterfaceSegregation\Response.cs" />
     <Compile Include="Liskov\IRunner.cs" />
     <Compile Include="Liskov\IWalker.cs" />
     <Compile Include="Liskov\Runner.cs" />

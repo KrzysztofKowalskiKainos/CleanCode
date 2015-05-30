@@ -22,7 +22,5 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
        
     }
 
-    public class Response { } 
-
-    public class Request { }
+    
 }
