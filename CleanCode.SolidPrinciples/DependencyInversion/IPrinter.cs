@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples
+namespace CleanCode.SolidPrinciples.DependencyInversion
 {
-    class Program
+    interface IPrinter
     {
-        static void Main(string[] args)
-        {
-
-        }
+         void Print(string textToCopy);
     }
 }

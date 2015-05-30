@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples
+namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    class Program
+    interface IAllPlayersActions
     {
-        static void Main(string[] args)
-        {
-
-        }
+        void AllOut();
+        void AllIn();
     }
 }

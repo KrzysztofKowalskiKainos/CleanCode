@@ -6,19 +6,9 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    interface ISinglePlayerActions
     {
-        void AllIn();
-
         void AddPlayer(string newPlayer);
-
-        void MessageReceived(string player);
-
-        IEnumerable<string> GetPlayerStatus(string player);
-
-        void Confirm(Request request);
-
-        Response Answer(Request request);
 
         void PausePlayerTimer(string player);
 
@@ -26,10 +16,6 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         void KickPlayer(string player);
 
-        void AllOut();
+        IEnumerable<string> GetPlayerStatus(string player);
     }
-
-    public class Response { } 
-
-    public class Request { }
 }
