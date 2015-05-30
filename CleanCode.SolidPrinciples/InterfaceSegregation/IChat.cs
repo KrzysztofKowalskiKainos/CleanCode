@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    public interface IChat
     {
-        void AllIn();
+        void Confirm(Request request);
 
-        void AllOut();
+        Response Answer(Request request);
+    }
 
-        void MessageReceived(string player);
+    public class Response { }
 
-    }    
+    public class Request { }
 }

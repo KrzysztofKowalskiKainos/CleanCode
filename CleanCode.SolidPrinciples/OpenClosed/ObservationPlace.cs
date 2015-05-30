@@ -2,7 +2,7 @@
 {
     public class ObservationPlace
     {
-        public string Environment { get; internal set; }
-        public PlaceType Type { get; internal set; }
+        public string environment { get; internal set; }
+        public PlaceType type { get; internal set; }
     }
 }
