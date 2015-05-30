@@ -13,7 +13,7 @@ namespace CleanCode.SolidPrinciples.Liskov
             Console.WriteLine("Hyiaa!");
         }
 
-        public void TexasRangerWalk()
+        new public void Walk()
         {
             Console.WriteLine("Chuck Norris doesn't walk - the earth moves beneath him");
         }
