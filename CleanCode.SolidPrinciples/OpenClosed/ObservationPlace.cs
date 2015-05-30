@@ -13,13 +13,17 @@ namespace CleanCode.SolidPrinciples
             {
                 throw new InvalidOperationException("Unknown place");
             }
-            Console.WriteLine(soundOfEnviroment);
+            ConsoleStringWriter(soundOfEnviroment);
             result = this.Environment;
             foreach (var ignored in ignoredSigns)
                 result = result.Replace(ignored, string.Empty);
 
             return result.Length;
          
-     }
+        }
+        public void ConsoleStringWriter(string soundOfEnviroment)
+        {
+            Console.WriteLine(soundOfEnviroment);
+        }
     }
 }
