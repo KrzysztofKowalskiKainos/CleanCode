@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
+
     interface ILobbyAllPlayersActions
     {
         void AllOut();
         void AllIn();
     }
+
 }
