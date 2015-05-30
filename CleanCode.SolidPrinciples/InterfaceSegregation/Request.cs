@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby: IPlayer, IMessage
+    public class Request
     {
-        void AllIn();
-        void AllOut();
     }
 }
