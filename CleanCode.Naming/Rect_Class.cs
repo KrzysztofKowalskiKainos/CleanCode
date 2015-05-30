@@ -16,8 +16,8 @@ namespace CleanCode.Naming
 
         public Rect(int FirstSide, int SecondSide)
         {
-            this._firstSide = FirstSide;
-            this._secondSide = SecondSide;
+            _firstSide = FirstSide;
+            _secondSide = SecondSide;
 
             _creationDate = DateTime.Now;
         }
