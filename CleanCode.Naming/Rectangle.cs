@@ -6,11 +6,11 @@ namespace CleanCode.Naming
     {
         #region Private fields
 
-        private int _firstSide;
+        private readonly int _firstSide;
 
-        private int _secondSize;
+        private readonly int _secondSide;
 
-        private DateTime _dateTime;
+        private readonly DateTime _creationDate;
 
         #endregion
 
@@ -18,26 +18,26 @@ namespace CleanCode.Naming
         {
             get
             {
-                return _firstSide * _secondSize;
+                return _firstSide * _secondSide;
             }
         }
 
-        public Rectangle(int firstSide, int secondSize)
+        public Rectangle(int firstSide, int secondSide)
         {
             _firstSide = firstSide;
-            _secondSize = secondSize;
-            _dateTime = DateTime.Now;
+            _secondSide = secondSide;
+            _creationDate = DateTime.Now;
         }
 
         public int ExistenceTimeInSeconds()
         {
-            var dateTimeNow = _dateTime - DateTime.Now;
+            var dateTimeNow = _creationDate - DateTime.Now;
             return (int)dateTimeNow.TotalSeconds;
         }
 
         public int ExistenceTimeInMilliseconds()
         {
-            var dateTimeNow = _dateTime - DateTime.Now;
+            var dateTimeNow = _creationDate - DateTime.Now;
             return (int)dateTimeNow.TotalMilliseconds;
         }
     }
