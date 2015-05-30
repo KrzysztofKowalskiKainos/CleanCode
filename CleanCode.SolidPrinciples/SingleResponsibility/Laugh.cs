@@ -8,16 +8,14 @@ namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
     class Laugh
     {
-        private int _nbOfTimes;
         private string _laughSound;
-        public Laugh(int nrOfTimes, string laughSound)
+        public Laugh( string laughSound)
         {
-            _nbOfTimes = nrOfTimes;
             _laughSound = laughSound;
         }
-        public string GenerateLaugh()
+        public string GenerateLaugh(int nbOfTimes)
         {
-            return string.Concat(Enumerable.Repeat(_laughSound, _nbOfTimes));
+            return string.Concat(Enumerable.Repeat(_laughSound, nbOfTimes));
         }
     }
 }

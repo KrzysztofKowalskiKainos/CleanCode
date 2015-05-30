@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CleanCode.SolidPrinciples.OpenClosed
+using CleanCode.SolidPrinciples.OpenClosed;
 
 namespace CleanCode.SolidPrinciples
 {
@@ -23,4 +23,4 @@ namespace CleanCode.SolidPrinciples
             }
         }
     }
-}
+

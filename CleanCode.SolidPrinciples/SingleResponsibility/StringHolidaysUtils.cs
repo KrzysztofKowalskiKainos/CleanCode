@@ -15,10 +15,10 @@ namespace CleanCode.SolidPrinciples
        
         public string HolidayName { get; private set; }
 
-        public StringHolidaysUtils(string holidayName, Laugh laugh, References Refs, string inputString)
+        public StringHolidaysUtils(string holidayName, Laugh laugh, References Refs, string inputString, int howManyTimes)
         {
 
-            _laughSound = laugh.GenerateLaugh();
+            _laughSound = laugh.GenerateLaugh(howManyTimes);
             HolidayName = holidayName;
             iReferences = Refs.CountReferences(inputString);
         }

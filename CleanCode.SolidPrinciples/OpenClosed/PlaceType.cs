@@ -1,8 +1,8 @@
 ﻿namespace CleanCode.SolidPrinciples
 {
-    public class PlaceType
+    public abstract class PlaceType
     {
-       public abstract void getEnvironement();
+       public abstract string getEnvironement();
  
     }
 }
