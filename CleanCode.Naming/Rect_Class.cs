@@ -5,40 +5,35 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class Rect_Class
+    class Rectangle
     {
-        // First side
-        private int _a;
+        private int _firstSide;
+        private int _secondSide;
+        private DateTime _creationDate;
 
-        // Second side
-        private int b;
-        private DateTime CDATE;
-
-        public Rect_Class(int a, int B)
+        public Rectangle(int firstSide, int secondSide)
         {
-            _a = a;
-            b = B;
-
-            CDATE = DateTime.Now;
+            _firstSide = firstSide;
+            _secondSide = secondSide;
+            _creationDate = DateTime.Now;
         }
 
-        public int field()
+        public int getField()
         {
-            return _a * b;
+            return _firstSide * _secondSide;
         }
 
-        // If duration should be in seconds
-        public int durationOfExistence(bool @is)
+        public int getExistenceDuration(bool inSeconds)
         {
-            var d = (CDATE - DateTime.Now);
+            var duration = (_creationDate - DateTime.Now);
 
-            if (@is)
+            if (inSeconds)
             {
-                return (int)d.TotalMilliseconds;
+                return (int)duration.TotalSeconds;
             }
             else
             {
-                return (int)d.TotalSeconds;
+                return (int)duration.TotalMilliseconds;
             }
         }
     }
