@@ -12,10 +12,10 @@ namespace CleanCode.Naming
             Console.WriteLine(rectangle.Field());
 
             Thread.Sleep(10);
-            Console.WriteLine(rectangle.ExistenceTimeInMilliseconds());
+            Console.WriteLine(rectangle.ExistenceTimeInSeconds());
 
             Thread.Sleep(1002);
-            Console.WriteLine(rectangle.ExistenceTimeInSeconds());
+            Console.WriteLine(rectangle.ExistenceTimeInMilliseconds());
         }
     }
 }
