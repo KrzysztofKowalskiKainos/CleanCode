@@ -29,6 +29,9 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
     public interface IPlayerMessager
     {
 
+        void Confirm(Request request);
+  
+
         void MessageReceived(string player);
 
         Response Answer(Request request);
@@ -36,8 +39,7 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
     }
 
     public class Response {
-        void Confirm(Request request);
-    } 
+       } 
 
     public class Request { 
     }
