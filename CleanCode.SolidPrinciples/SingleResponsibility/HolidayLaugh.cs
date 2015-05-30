@@ -4,7 +4,7 @@ namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
     class HolidayLaugh
     {
-        private string _laughSound;
+        private readonly string _laughSound;
 
         HolidayLaugh(string laughSound)
         {

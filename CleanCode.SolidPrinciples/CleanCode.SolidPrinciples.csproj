@@ -47,7 +47,7 @@
     <Compile Include="DependencyInversion\Printer.cs" />
     <Compile Include="InterfaceSegregation\ILobby.cs" />
     <Compile Include="InterfaceSegregation\ILobbyMessages.cs" />
-    <Compile Include="InterfaceSegregation\ILobbyPlayers.cs" />
+    <Compile Include="InterfaceSegregation\ILobbyPlayer.cs" />
     <Compile Include="InterfaceSegregation\Request.cs" />
     <Compile Include="InterfaceSegregation\Response.cs" />
     <Compile Include="Liskov\Runner.cs" />

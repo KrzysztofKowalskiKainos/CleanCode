@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace CleanCode.SolidPrinciples
+namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
     class Holidays
     {
-        private string[] _references;
+        private readonly string[] _references;
 
         public string HolidayName { get; private set; }
 

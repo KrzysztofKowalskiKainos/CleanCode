@@ -4,8 +4,8 @@ namespace CleanCode.SolidPrinciples
 {
     public class ObservationPlace
     {
-        public string Environment { get; internal set; }
-        public IPlace Place { get; internal set; }
+        private string Environment { get; set; }
+        private IPlace Place { get; set; }
 
         internal bool Observe()
         {
