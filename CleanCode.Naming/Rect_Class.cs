@@ -8,37 +8,37 @@ namespace CleanCode.Naming
     class Rect_Class
     {
         // First side
-        private int _a;
+        private int sideA;
 
         // Second side
-        private int b;
-        private DateTime CDATE;
+        private int sideB;
+        private DateTime actualTime;
 
-        public Rect_Class(int a, int B)
+        public Rect_Class(int sideA, int sideB)
         {
-            _a = a;
-            b = B;
+            this.sideA = sideA;
+            this.sideB = sideB;
 
-            CDATE = DateTime.Now;
+            actualTime = DateTime.Now;
         }
 
-        public int field()
+        public int Field()
         {
-            return _a * b;
+            return sideA * sideB;
         }
 
         // If duration should be in seconds
-        public int durationOfExistence(bool @is)
+        public int DurationOfExistence(bool durationInSeconds)
         {
-            var d = (CDATE - DateTime.Now);
+            var actualTime = (this.actualTime - DateTime.Now);
 
-            if (@is)
+            if (durationInSeconds)
             {
-                return (int)d.TotalMilliseconds;
+                return (int)actualTime.TotalMilliseconds;
             }
             else
             {
-                return (int)d.TotalSeconds;
+                return (int)actualTime.TotalSeconds;
             }
         }
     }

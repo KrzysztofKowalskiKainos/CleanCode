@@ -39,11 +39,5 @@ namespace CleanCode.SolidPrinciples
         {
             return string.Concat(Enumerable.Repeat(laughSound, nrOfTimes));
         }
-
-        //destructor
-        ~StringHolidaysLaugh()
-        {
-
-        }
     }
 }

@@ -19,15 +19,19 @@ namespace CleanCode.SolidPrinciples
         }
         StringHolidayCountReferences(string reference)
         {
-            //in case of 'shared/static' property
-            for(int a=0; a<references.GetLength(0); a++)
+            if (references == null)
+                references = new string[1];
+            else
             {
-                if (references[a] == null)
-                {
-                    references[a] = reference;
-                    break;
-                }
-                    
+                if (references != null)
+                    for (int a = 0; a < references.GetLength(0); a++)
+                    {
+                        if (references[a] == null)
+                        {
+                            references[a] = reference;
+                            break;
+                        }
+                    }
             }
         }
         StringHolidayCountReferences(string[] references)
