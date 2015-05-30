@@ -5,40 +5,37 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class Rect_Class
+    enum TimeUnit { MiliSeconds, Seconds};
+
+    class RectClass
     {
-        // First side
-        private int _a;
+        private int _width, _height;
+        private DateTime _creationDate;
 
-        // Second side
-        private int b;
-        private DateTime CDATE;
-
-        public Rect_Class(int a, int B)
+        public RectClass(int width, int height)
         {
-            _a = a;
-            b = B;
-
-            CDATE = DateTime.Now;
+            _width = width;
+            _height = height;
+            _creationDate = DateTime.Now;
         }
 
-        public int field()
+        public int Field()
         {
-            return _a * b;
+            return _width * _height;
         }
 
         // If duration should be in seconds
-        public int durationOfExistence(bool @is)
+        public int TimeOfLife(TimeUnit timeUnit)
         {
-            var d = (CDATE - DateTime.Now);
+            var durationSeconds = (_creationDate - DateTime.Now);
 
-            if (@is)
+            if (timeUnit  == TimeUnit.MiliSeconds)
             {
-                return (int)d.TotalMilliseconds;
+                return (int)durationSeconds.TotalMilliseconds;
             }
             else
             {
-                return (int)d.TotalSeconds;
+                return (int)durationSeconds.TotalSeconds;
             }
         }
     }
