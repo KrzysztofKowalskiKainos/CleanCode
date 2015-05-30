@@ -2,11 +2,11 @@
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class HolidayLaugh
+    class HolidayLaughterGenerator
     {
         private readonly string _laughSound;
 
-        HolidayLaugh(string laughSound)
+        public HolidayLaughterGenerator(string laughSound)
         {
             _laughSound = laughSound;
         }

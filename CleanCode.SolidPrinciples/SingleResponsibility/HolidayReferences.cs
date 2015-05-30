@@ -3,15 +3,12 @@ using System.Text.RegularExpressions;
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class Holidays
+    class HolidayReferences
     {
         private readonly string[] _references;
 
-        public string HolidayName { get; private set; }
-
-        public Holidays(string holidayName, params string[] references)
+        public HolidayReferences(params string[] references)
         {
-            HolidayName = holidayName;
             _references = references;
         }
 
