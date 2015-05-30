@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CleanCode.SolidPrinciples.SingleResponsibility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,17 @@ namespace CleanCode.SolidPrinciples
 
         public string GenerateLaugh(int nrOfTimes)
         {
-            return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
+            Laugh laugh = new Laugh(nrOfTimes, _laughSound);
+
+            return laugh.GenerateLaugh();
         }
 
         public int CountReferences(string inputString)
         {
-            return _references.Sum(r => Regex.Matches(inputString.ToLower(), Regex.Escape(r.ToLower())).Count);
+            References reference = new References(inputString, _references);
+
+            return reference.CountReferences();
+            
         }
     }
 }
