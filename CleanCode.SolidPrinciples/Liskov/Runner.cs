@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.Liskov
 {
-    class Runner : Walker
+    class Runner 
     {
         public void Run()
         {
