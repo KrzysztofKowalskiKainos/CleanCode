@@ -12,10 +12,5 @@ namespace CleanCode.SolidPrinciples.Liskov
         {
             Console.WriteLine("Hyiaa!");
         }
-
-        public override void Walk()
-        {
-            throw new Exception("Chuck Norris doesn't walk - the earth moves beneath him");
-        }
     }
 }
