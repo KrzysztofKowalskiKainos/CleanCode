@@ -10,13 +10,13 @@ namespace CleanCode.Naming
     class RectClass
     {
         private int _width, _height;
-        private DateTime _creationDate;
+        private DateTime _creation;
 
         public RectClass(int width, int height)
         {
             _width = width;
             _height = height;
-            _creationDate = DateTime.Now;
+            _creation = DateTime.Now;
         }
 
         public int Field()
@@ -27,7 +27,7 @@ namespace CleanCode.Naming
         // If duration should be in seconds
         public int TimeOfLife(TimeUnit timeUnit)
         {
-            var timeOfLife = (_creationDate - DateTime.Now);
+            var timeOfLife = (_creation - DateTime.Now);
 
             if (timeUnit  == TimeUnit.MiliSeconds)
             {
