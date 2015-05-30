@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.Liskov
 {
-    public class Walker : IWalker
+    interface IWalker
     {
-        public virtual void Walk()
-        {
-            Console.WriteLine("Just walkin'");
-        }
     }
 }

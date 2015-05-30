@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    public class Observer
+    public interface IPlace
     {
-        public bool Observe(IPlace place)
-        {
-          
-            return place.checkLength();
-          
-        }
+        bool checkLength();
     }
 }

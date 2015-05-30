@@ -8,7 +8,7 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
     public interface ILobby
     {
-        void AllIn();
+       
 
         void AddPlayer(string newPlayer);
 
@@ -16,17 +16,10 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         IEnumerable<string> GetPlayerStatus(string player);
 
-        void Confirm(Request request);
-
-        Response Answer(Request request);
-
-        void PausePlayerTimer(string player);
-
-        void RefreshPlayerTimer(string player);
 
         void KickPlayer(string player);
 
-        void AllOut();
+       
     }
 
     public class Response { } 
