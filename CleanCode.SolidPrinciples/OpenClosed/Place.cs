@@ -19,8 +19,6 @@ namespace CleanCode.SolidPrinciples.OpenClosed
         {
             Console.WriteLine(sound);
 
-
-
             result = Environment;
             foreach (var ignored in ignoredSightings)
                 result = result.Replace(ignored, string.Empty);
