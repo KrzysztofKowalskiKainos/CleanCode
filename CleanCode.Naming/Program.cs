@@ -9,7 +9,7 @@ namespace CleanCode.Naming
         {
             var rectangle = new Rectangle(10, 20);
 
-            Console.WriteLine(rectangle.Field());
+            Console.WriteLine(rectangle.Field);
 
             Thread.Sleep(10);
             Console.WriteLine(rectangle.ExistenceTimeInSeconds());
