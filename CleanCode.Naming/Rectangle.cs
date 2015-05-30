@@ -14,16 +14,19 @@ namespace CleanCode.Naming
 
         #endregion
 
+        public int Field
+        {
+            get
+            {
+                return _firstSide * _secondSize;
+            }
+        }
+
         public Rectangle(int firstSide, int secondSize)
         {
             _firstSide = firstSide;
             _secondSize = secondSize;
             _dateTime = DateTime.Now;
-        }
-
-        public int Field()
-        {
-            return _firstSide * _secondSize;
         }
 
         public int ExistenceTimeInSeconds()

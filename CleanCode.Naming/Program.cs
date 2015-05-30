@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace CleanCode.Naming
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
