@@ -54,11 +54,11 @@
     <Compile Include="OpenClosed\ForestObserver.cs" />
     <Compile Include="OpenClosed\IObserver.cs" />
     <Compile Include="OpenClosed\OceanObserver.cs" />
-    <Compile Include="SingleResponsibility\LaughGenerator.cs" />
-    <Compile Include="SingleResponsibility\ReferenceCounter.cs" />
+    <Compile Include="SingleResponsibility\HolidayParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleResponsibility\Holiday.cs" />
+    <Compile Include="SingleResponsibility\LaughGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

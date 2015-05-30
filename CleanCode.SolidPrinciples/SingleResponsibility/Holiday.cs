@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples
 {
-    class StringHolidaysUtils
+    class Holiday
     {
         public string HolidayName { get; private set; }
+        public string LaughSound { get; private set; }
+        public string[] References {get; private set}
 
-        public StringHolidaysUtils(string holidayName)
+        public Holiday(string holidayName, string laughSound, params string[] references)
         {
-            HolidayName = holidayName;   
-        }  
+            HolidayName = holidayName;
+            this.LaughSound = laughSound; 
+            this.References = references;
+        }
+  
     }
+
 
 
 

@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    class ReferenceCounter
+    class HolidayParser
     {
         private string[] _references;
-        public ReferenceCounter(params string[] references)
+        private Holiday _holiday;
+        public HolidayParser(Holiday holiday)
         {
-            _references = references;
+            this._holiday = holiday;
         }
         public int CountReferences(string inputString)
         {
             return _references.Sum(r => Regex.Matches(inputString.ToLower(), Regex.Escape(r.ToLower())).Count);
         }
+
+  
     }
 }

@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class LaughGenerator
+    static class LaughGenerator
     {
-        private string _laughSound;
-
-        public LaughGenerator(string laugh)
+        public string GenerateLaugh(Holiday holiday, int nrOfTimes)
         {
-            this._laughSound = laugh;
-        }
-
-        public string GenerateLaugh(int nrOfTimes)
-        {
-            return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
+            return string.Concat(Enumerable.Repeat(holiday.LaughSound, nrOfTimes));
         }
     }
 }
