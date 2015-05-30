@@ -28,7 +28,7 @@ namespace CleanCode.Naming
         // If duration should be in seconds
         public int DurationOfExistence(bool durationInSeconds)
         {
-            var actualTime = (this.actualTime - DateTime.Now);
+            var actualTime = (DateTime.Now - this.actualTime);
 
             if (durationInSeconds)
             {
