@@ -27,7 +27,7 @@ namespace CleanCode.Naming
 
         private TimeSpan ExistenceTimeSpan() 
         {
-            return _createdAt - DateTime.Now;
+            return DateTime.Now - _createdAt;
         }
 
         public int DurationOfExistence(bool InMilliseconds)
