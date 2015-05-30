@@ -14,8 +14,8 @@ namespace CleanCode.Naming
 
         public Rectangle(int A, int B)
         {
-            this._a = A;
-            this._b = B;
+            _a = A;
+            _b = B;
 
             _createdAt = DateTime.Now;
         }
