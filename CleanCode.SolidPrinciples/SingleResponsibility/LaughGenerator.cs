@@ -11,11 +11,6 @@ namespace CleanCode.SolidPrinciples.SingleResponsibility
     class LaughGenerator
     {
 
-        public LaughGenerator()
-        {
-        }
-
-
         public string GenerateLaugh(int nrOfTimes, string _laughSound)
         {
             return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));

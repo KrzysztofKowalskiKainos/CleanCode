@@ -15,17 +15,23 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
     public interface IPlayer
     {
-        void PausePlayerTimer(string player);
-
+        
         void AddPlayer(string newPlayer);
-
-        void RefreshPlayerTimer(string player);
 
         void KickPlayer(string player);  
 
         IEnumerable<string> GetPlayerStatus(string player);
 
     }
+
+    public interface IPlayerTimer{
+
+        void PausePlayerTimer(string player);
+
+        void RefreshPlayerTimer(string player);
+    
+    }
+
 
     public interface IMessaging
     {

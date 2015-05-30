@@ -8,10 +8,6 @@ namespace CleanCode.SolidPrinciples.DependencyInversion
 {
     public interface IPrinter
     {
-
-        public IPrinter(string Message)
-        {
-
-        }
+        public void Print(string Message);
     }
 }

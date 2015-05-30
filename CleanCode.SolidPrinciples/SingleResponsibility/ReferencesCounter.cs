@@ -11,11 +11,6 @@ namespace CleanCode.SolidPrinciples.SingleResponsibility
     class ReferencesCounter
     {
 
-        public ReferencesCounter()
-        {
-        }
-
-
         public int CountReferences(string inputString, string[] _references)
         {
             return _references.Sum(r => Regex.Matches(inputString.ToLower(), Regex.Escape(r.ToLower())).Count);
