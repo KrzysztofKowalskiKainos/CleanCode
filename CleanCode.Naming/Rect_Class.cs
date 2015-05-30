@@ -10,14 +10,14 @@ namespace CleanCode.Naming
         private int _firstSide;     // First side
         private int _secondSide;    // Second side
 
-        private DateTime _date;
+        private DateTime _creationDate;
 
         public RectClass(int firstSide, int secondSide)
         {
             _firstSide = firstSide;
             _secondSide = secondSide;
 
-            _date = DateTime.Now;
+            _creationDate = DateTime.Now;
         }
 
         /*
@@ -33,7 +33,7 @@ namespace CleanCode.Naming
          */
         public int GetExistanceDurationInMilliSeconds()
         {
-            var d = (DateTime.Now -_date);
+            var d = (DateTime.Now - _creationDate);
             return (int)d.TotalMilliseconds;
         }
 
@@ -42,7 +42,7 @@ namespace CleanCode.Naming
          */
         public int GetExistanceDurationInSeconds()
         {
-            var d = (DateTime.Now - _date);
+            var d = (DateTime.Now - _creationDate);
             return (int)d.TotalSeconds;
         }
     }
