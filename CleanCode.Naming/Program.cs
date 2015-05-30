@@ -11,9 +11,9 @@ namespace CleanCode.Naming
     {
         static void Main(string[] args)
         {
-            var rectangle = new Rect_Class(10, 20);
+            var rectangle = new RectangleClass(10, 20);
 
-            Console.WriteLine(rectangle.field());
+            Console.WriteLine(rectangle.getField());
 
             Thread.Sleep(10);
             Console.WriteLine(rectangle.durationOfExistence(false));
@@ -22,4 +22,6 @@ namespace CleanCode.Naming
             Console.WriteLine(rectangle.durationOfExistence(true));
         }
     }
+
+}
 }
