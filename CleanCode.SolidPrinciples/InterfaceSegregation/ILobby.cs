@@ -9,27 +9,37 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
     public interface ILobby
     {
         void AllIn();
-
+        
         void AddPlayer(string newPlayer);
 
-        void MessageReceived(string player);
-
         IEnumerable<string> GetPlayerStatus(string player);
-
-        void Confirm(Request request);
-
-        Response Answer(Request request);
-
-        void PausePlayerTimer(string player);
-
-        void RefreshPlayerTimer(string player);
 
         void KickPlayer(string player);
 
         void AllOut();
     }
 
-    public class Response { } 
+    public interface IPlayerTimer
+    {
+        void PausePlayerTimer(string player);
 
-    public class Request { }
+        void RefreshPlayerTimer(string player);
+    }
+
+    public interface IPlayerMessager
+    {
+
+        void MessageReceived(string player);
+
+        Response Answer(Request request);
+
+    }
+
+    public class Response {
+        void Confirm(Request request);
+    } 
+
+    public class Request { 
+    }
+
 }
