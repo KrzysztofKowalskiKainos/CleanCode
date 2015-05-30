@@ -13,7 +13,7 @@ namespace CleanCode.Naming
         {
             var rectangle = new RectClass(10, 20);
 
-            Console.WriteLine(rectangle.Field());
+            Console.WriteLine(rectangle.Area());
 
             Thread.Sleep(10);
             Console.WriteLine(rectangle.TimeOfLife(TimeUnit.MiliSeconds));

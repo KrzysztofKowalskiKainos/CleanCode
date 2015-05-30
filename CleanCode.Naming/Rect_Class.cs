@@ -19,7 +19,7 @@ namespace CleanCode.Naming
             _creation = DateTime.Now;
         }
 
-        public int Field()
+        public int Area()
         {
             return _width * _height;
         }
