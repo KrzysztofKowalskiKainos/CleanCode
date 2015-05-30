@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    interface PlayerController
+    interface IMessage
     {
-        void KickPlayer(string player);
+        void MessageReceived(string player);
 
-        void AddPlayer(string newPlayer);
+        void Confirm(Request request);
 
-        IEnumerable<string> GetPlayerStatus(string player);
+        Response Answer(Request request);
     }
+
 }

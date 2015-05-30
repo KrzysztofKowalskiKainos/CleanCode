@@ -17,7 +17,6 @@ namespace CleanCode.SolidPrinciples
 
             observer.Observe(place);
             Console.ReadLine();
-
         }
     }
 }

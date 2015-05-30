@@ -7,14 +7,14 @@
 
         PlaceType(string sounds, string[] ignoredSightings)
         {
-            this.sounds = sounds;
-            this.ignoredSightings = ignoredSightings;
+            _sounds = sounds;
+            _ignoredSightings = ignoredSightings;
         }
 
-        private readonly string sounds;
-        private readonly string[] ignoredSightings;
+        private readonly string _sounds;
+        private readonly string[] _ignoredSightings;
 
-        public string Sounds { get { return sounds; } }
-        public string[] IgnoredSightings { get { return ignoredSightings; } }
+        public string Sounds { get { return _sounds; } }
+        public string[] IgnoredSightings { get { return _ignoredSightings; } }
     }
 }

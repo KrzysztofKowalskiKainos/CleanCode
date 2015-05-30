@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    interface PlayerTimer
+    interface IPlayerController
     {
-        void PausePlayerTimer(string player);
+        void KickPlayer(string player);
 
-        void RefreshPlayerTimer(string player);
+        void AddPlayer(string newPlayer);
+
+        IEnumerable<string> GetPlayerStatus(string player);
     }
 }

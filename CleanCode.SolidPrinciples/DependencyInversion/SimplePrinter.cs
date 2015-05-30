@@ -2,7 +2,7 @@
 
 namespace CleanCode.SolidPrinciples
 {
-    public class SimplePrinter : Printer
+    public class SimplePrinter : IPrinter
     {
         public void Print(string textToPrint)
         {

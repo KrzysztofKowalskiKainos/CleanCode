@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples
 {
-    public interface Printer
+    public interface IPrinter
     {
         void Print(string textToPrint);
     }

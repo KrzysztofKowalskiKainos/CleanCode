@@ -8,14 +8,14 @@ namespace CleanCode.SolidPrinciples
 {
     public class Observer
     {
-        private EnvironmentCleaner cleaner = new EnvironmentCleaner();
+        private EnvironmentCleaner _cleaner = new EnvironmentCleaner();
 
         public bool Observe(ObservationPlace place)
         {
             Console.WriteLine(place.Type.Sounds);
-            string environment = cleaner.cleanEnvironment(place);
+            string environment = _cleaner.cleanEnvironment(place);
 
-            return cleaner.isEnvironmentExist(environment);
+            return _cleaner.isEnvironmentExist(environment);
         }
     }
 }

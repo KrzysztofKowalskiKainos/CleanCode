@@ -43,12 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
-    <Compile Include="DependencyInversion\Printer.cs" />
+    <Compile Include="DependencyInversion\IPrinter.cs" />
     <Compile Include="DependencyInversion\SimplePrinter.cs" />
     <Compile Include="InterfaceSegregation\ILobby.cs" />
-    <Compile Include="InterfaceSegregation\Message.cs" />
-    <Compile Include="InterfaceSegregation\PlayerController.cs" />
-    <Compile Include="InterfaceSegregation\PlayerTimer.cs" />
+    <Compile Include="InterfaceSegregation\IMessage.cs" />
+    <Compile Include="InterfaceSegregation\IPlayerController.cs" />
+    <Compile Include="InterfaceSegregation\IPlayerTimer.cs" />
+    <Compile Include="InterfaceSegregation\Request.cs" />
+    <Compile Include="InterfaceSegregation\Response.cs" />
     <Compile Include="Liskov\Runner.cs" />
     <Compile Include="Liskov\TexasRanger.cs" />
     <Compile Include="Liskov\Walker.cs" />
