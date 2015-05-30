@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class CountReferences
+    class References
     {
         private string[] _references;
 
-        public CountReferences(string[] references)
+        public References(string[] references)
         {
             _references = references;
         }

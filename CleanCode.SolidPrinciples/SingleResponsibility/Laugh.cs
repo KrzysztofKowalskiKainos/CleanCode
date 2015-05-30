@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class GenerateLaugh
+    class Laugh
     {
         
         private String _laughSound;
 
-        public GenerateLaugh(string laughSound)
+        public Laugh(string laughSound)
         {
             _laughSound = laughSound;
         }
