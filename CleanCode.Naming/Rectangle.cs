@@ -10,14 +10,13 @@ namespace CleanCode.Naming
         
         private int _firstSide;
         private int _secondSide;
-        private DateTime _currentDate;
+        private DateTime _createdAt;
 
         public Rectangle(int firstSide, int secondSide)
         {
             _firstSide = firstSide;
             _secondSide = secondSide;
-
-            _currentDate = DateTime.Now;
+            _createdAt = DateTime.Now;
         }
 
         public int getField()
@@ -25,10 +24,9 @@ namespace CleanCode.Naming
             return _firstSide*_secondSide;
         }
 
-        // If duration should be in seconds
         public int durationOfExistence(bool isDurationInSecond)
         {
-            var duration = (DateTime.Now - _currentDate);
+            var duration = (DateTime.Now - _createdAt);
 
             if (isDurationInSecond)
             {
