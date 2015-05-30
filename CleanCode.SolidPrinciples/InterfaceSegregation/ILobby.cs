@@ -10,15 +10,32 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
     {
         void AllIn();
 
-        void AddPlayer(string newPlayer);
+        void MessageReceived(string player);
 
-        void PausePlayerTimer(string player);
+        void Confirm(Request request);
 
-        void RefreshPlayerTimer(string player);
-
-        void KickPlayer(string player);
+        Response Answer(Request request);
 
         void AllOut();
     }
 
+    public interface IPlayerTimer
+    {
+        void PausePlayerTimer(string player);
+
+        void RefreshPlayerTimer(string player);
+    }
+
+    public interface IPlayerAdministration
+    {
+        void AddPlayer(string newPlayer);
+
+        void KickPlayer(string player);
+
+        IEnumerable<string> GetPlayerStatus(string player);
+    }
+
+    public class Response { }
+
+    public class Request { }
 }
