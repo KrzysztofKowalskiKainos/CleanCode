@@ -12,14 +12,6 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         void AddPlayer(string newPlayer);
 
-        void MessageReceived(string player);
-
-        IEnumerable<string> GetPlayerStatus(string player);
-
-        void Confirm(Request request);
-
-        Response Answer(Request request);
-
         void PausePlayerTimer(string player);
 
         void RefreshPlayerTimer(string player);
@@ -29,7 +21,4 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
         void AllOut();
     }
 
-    public class Response { } 
-
-    public class Request { }
 }

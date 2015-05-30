@@ -15,11 +15,11 @@ namespace CleanCode.SolidPrinciples.DependencyInversion
             _printer = printer;
         }
 
-        public void Copy(string textToCopy, int nrOfCopies)
+        public void Copy(Object objectToCopy, int nrOfCopies)
         {
             for(int i=0; i<nrOfCopies; i++)
             {
-                _printer.Print(textToCopy);
+                _printer.Print(objectToCopy);
             }
         }
     }
