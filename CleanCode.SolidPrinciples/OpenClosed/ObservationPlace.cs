@@ -14,8 +14,9 @@
 
             result = Environment;
             foreach (var ignored in ignoredSightings)
+            {
                 result = result.Replace(ignored, string.Empty);
-
+            }
             return result;
         }
 
