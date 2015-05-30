@@ -13,7 +13,7 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
         void AllOut();
     }
 
-    public interface Player
+    public interface IPlayer
     {
         void PausePlayerTimer(string player);
 
@@ -21,17 +21,17 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         void RefreshPlayerTimer(string player);
 
-        void KickPlayer(string player);
-
-        void MessageReceived(string player);
+        void KickPlayer(string player);  
 
         IEnumerable<string> GetPlayerStatus(string player);
 
     }
 
-    public interface Messaging
+    public interface IMessaging
     {
         Response Answer(Request request);
+
+        void MessageReceived(string player);
 
         void Confirm(Request request);
 

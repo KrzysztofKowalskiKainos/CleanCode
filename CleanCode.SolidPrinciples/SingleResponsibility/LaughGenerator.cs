@@ -8,18 +8,15 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class Laugh
+    class LaughGenerator
     {
-        private int nrOfTimes = 0;
-        private String _laughSound = null;
 
-        public Laugh(int nrOfTimes, string _laughSound)
+        public LaughGenerator()
         {
-            this.nrOfTimes = nrOfTimes;
         }
 
 
-        public string GenerateLaugh()
+        public string GenerateLaugh(int nrOfTimes, string _laughSound)
         {
             return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
         }

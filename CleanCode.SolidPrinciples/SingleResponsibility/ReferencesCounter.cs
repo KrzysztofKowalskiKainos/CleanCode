@@ -8,19 +8,15 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    class References
+    class ReferencesCounter
     {
-        private string inputString = null;
-        private string[] _references = null;
 
-        public References(string inputString, string[] _references)
+        public ReferencesCounter()
         {
-            this.inputString = inputString;
-            this._references = _references;
         }
 
 
-        public int CountReferences()
+        public int CountReferences(string inputString, string[] _references)
         {
             return _references.Sum(r => Regex.Matches(inputString.ToLower(), Regex.Escape(r.ToLower())).Count);
         }
