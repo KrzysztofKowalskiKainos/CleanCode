@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    class Ocean
+    class Ocean: ObservationPlace
     {
         protected string[] GetIgnoredSightings()
         {
