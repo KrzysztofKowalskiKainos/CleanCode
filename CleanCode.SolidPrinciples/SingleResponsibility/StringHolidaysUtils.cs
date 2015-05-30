@@ -7,24 +7,33 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples
 {
-    class StringHolidaysUtils
+    class Laugh
     {
         private string _laughSound;
-        private string[] _references;
-
-        public string HolidayName { get; private set; }
-
-        public StringHolidaysUtils(string holidayName, string laugh, params string[] references)
+        public Laugh(string laugh)
         {
             _laughSound = laugh;
-            HolidayName = holidayName;
-            _references = references;
         }
-
         public string GenerateLaugh(int nrOfTimes)
         {
             return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
         }
+    }
+    class StringHolidaysUtils
+    {
+        
+        private string[] _references;
+
+        public string HolidayName { get; private set; }
+
+        public StringHolidaysUtils(string holidayName, params string[] references)
+        {
+            
+            HolidayName = holidayName;
+            _references = references;
+        }
+
+
 
         public int CountReferences(string inputString)
         {
