@@ -1,4 +1,5 @@
 ﻿using CleanCode.SolidPrinciples.DependencyInversion;
+using CleanCode.SolidPrinciples.Liskov;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,5 @@ namespace CleanCode.SolidPrinciples
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
