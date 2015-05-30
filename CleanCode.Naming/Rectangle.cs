@@ -7,32 +7,32 @@ namespace CleanCode.Naming
 {
     class Rectangle
     {
-        private int a;
-        private int b;
+        private int _a;
+        private int _b;
 
-        private DateTime createdAt;
+        private DateTime _createdAt;
 
-        public Rectangle(int a, int B)
+        public Rectangle(int A, int B)
         {
-            this.a = a;
-            this.b = B;
+            this._a = A;
+            this._b = B;
 
-            createdAt = DateTime.Now;
+            _createdAt = DateTime.Now;
         }
 
         public int field()
         {
-            return a * b;
+            return _a * _b;
         }
 
         private TimeSpan existenceTimeSpan() 
         {
-            return createdAt - DateTime.Now;
+            return _createdAt - DateTime.Now;
         }
 
-        public int durationOfExistence(bool inMiliseconds)
+        public int durationOfExistence(bool InMiliseconds)
         {
-            return inMiliseconds ? durationOfExistenceInMiliseconds() : durationOfExistenceInSeconds();
+            return InMiliseconds ? durationOfExistenceInMiliseconds() : durationOfExistenceInSeconds();
         }
 
         public int durationOfExistenceInSeconds()
