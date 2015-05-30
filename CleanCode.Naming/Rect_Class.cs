@@ -27,15 +27,15 @@ namespace CleanCode.Naming
         // If duration should be in seconds
         public int TimeOfLife(TimeUnit timeUnit)
         {
-            var durationSeconds = (_creationDate - DateTime.Now);
+            var timeOfLife = (_creationDate - DateTime.Now);
 
             if (timeUnit  == TimeUnit.MiliSeconds)
             {
-                return (int)durationSeconds.TotalMilliseconds;
+                return (int)timeOfLife.TotalMilliseconds;
             }
             else
             {
-                return (int)durationSeconds.TotalSeconds;
+                return (int)timeOfLife.TotalSeconds;
             }
         }
     }
