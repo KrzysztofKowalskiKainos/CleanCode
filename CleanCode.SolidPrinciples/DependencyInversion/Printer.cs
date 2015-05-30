@@ -2,9 +2,13 @@
 
 namespace CleanCode.SolidPrinciples.DependencyInversion
 {
-    public class Printer
+    public interface IPrintable
     {
-        internal void Print(string textToCopy)
+        void Print(string textToPrint);
+    }
+    public class Printer:IPrintable
+    {
+        public void Print(string textToCopy)
         {
             Console.WriteLine(textToCopy);
         }
