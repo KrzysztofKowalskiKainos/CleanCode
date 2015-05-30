@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class Rect_Class
+    class Rectangle
     {
         private int sideA;
         private int sideB;
@@ -13,7 +13,7 @@ namespace CleanCode.Naming
         private DateTime actualTime;
 
 
-        public Rect_Class(int sideA, int sideB)
+        public Rectangle(int sideA, int sideB)
         {
             this.sideA = sideA;
             this.sideB = sideB;
