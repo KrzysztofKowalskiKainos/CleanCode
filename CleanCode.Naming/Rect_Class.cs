@@ -7,12 +7,12 @@ namespace CleanCode.Naming
 {
     enum TimeUnit { MiliSeconds, Seconds};
 
-    class RectClass
+    class Rectangle
     {
         private int _width, _height;
         private DateTime _creation;
 
-        public RectClass(int width, int height)
+        public Rectangle(int width, int height)
         {
             _width = width;
             _height = height;
@@ -25,17 +25,17 @@ namespace CleanCode.Naming
         }
 
         // If duration should be in seconds
-        public int TimeOfLife(TimeUnit timeUnit)
+        public int InstanceLifeTime(TimeUnit timeUnit)
         {
-            var timeOfLife = (_creation - DateTime.Now);
+            var instanceTimeOfLife = (DateTime.Now - _creation);
 
             if (timeUnit  == TimeUnit.MiliSeconds)
             {
-                return (int)timeOfLife.TotalMilliseconds;
+                return (int)instanceTimeOfLife.TotalMilliseconds;
             }
             else
             {
-                return (int)timeOfLife.TotalSeconds;
+                return (int)instanceTimeOfLife.TotalSeconds;
             }
         }
     }

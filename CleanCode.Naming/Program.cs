@@ -11,15 +11,15 @@ namespace CleanCode.Naming
     {
         static void Main(string[] args)
         {
-            var rectangle = new RectClass(10, 20);
+            var rectangle = new Rectangle(10, 20);
 
             Console.WriteLine(rectangle.Area());
 
             Thread.Sleep(10);
-            Console.WriteLine(rectangle.TimeOfLife(TimeUnit.MiliSeconds));
+            Console.WriteLine(rectangle.InstanceLifeTime(TimeUnit.MiliSeconds));
 
             Thread.Sleep(1002);
-            Console.WriteLine(rectangle.TimeOfLife(TimeUnit.Seconds));
+            Console.WriteLine(rectangle.InstanceLifeTime(TimeUnit.Seconds));
         }
     }
 }
