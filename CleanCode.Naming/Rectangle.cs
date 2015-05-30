@@ -20,7 +20,7 @@ namespace CleanCode.Naming
             _createdAt = DateTime.Now;
         }
 
-        public int Area()
+        public int CalculateArea()
         {
             return _a * _b;
         }

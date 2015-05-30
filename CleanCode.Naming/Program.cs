@@ -13,7 +13,7 @@ namespace CleanCode.Naming
         {
             var rectangle = new Rectangle(10, 20);
 
-            Console.WriteLine(rectangle.Area());
+            Console.WriteLine(rectangle.CalculateArea());
 
             Thread.Sleep(10);
             Console.WriteLine(rectangle.DurationOfExistence(false));
