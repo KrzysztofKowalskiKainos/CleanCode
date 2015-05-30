@@ -8,17 +8,17 @@ namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
     class StringHoliday
     {
-        public string _holidayName { get; private set; }
+        public string holidayName { get; private set; }
 
-        public StringLaughterGenerator _laughterGenerator { get; private set; }
-        public StringReferenceCounter _referenceCounter { get; private set; }
+        public StringLaughterGenerator laughterGenerator { get; private set; }
+        public StringReferenceCounter referenceCounter { get; private set; }
 
         public StringHoliday(string holidayName, string laugh, params string[] references)
         {
-            _holidayName = holidayName;      
+            this.holidayName = holidayName;      
 
-            _laughterGenerator = new StringLaughterGenerator(laugh);
-            _referenceCounter = new StringReferenceCounter(references);            
+            laughterGenerator = new StringLaughterGenerator(laugh);
+            referenceCounter = new StringReferenceCounter(references);            
         }
     }
 }
