@@ -7,18 +7,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples
 {
-    class Laugh
-    {
-        private string _laughSound;
-        public Laugh(string laugh)
-        {
-            _laughSound = laugh;
-        }
-        public string GenerateLaugh(int nrOfTimes)
-        {
-            return string.Concat(Enumerable.Repeat(_laughSound, nrOfTimes));
-        }
-    }
+
     class StringHolidaysUtils
     {
         

@@ -6,10 +6,10 @@ namespace CleanCode.SolidPrinciples
         public string Environment { get; internal set; }
         public PlaceType Type { get; internal set; }
 
-        public int lengthOfIngoredSigns(string[] ignoredSigns, string soundOfEnviroment)
+        public int LengthOfIngoredSigns(string[] ignoredSigns, string soundOfEnviroment)
         {
             string result;
-            if ((ignoredSigns==null) || (soundOfEnviroment==null))
+            if (this.Type != PlaceType.Forest && this.Type != PlaceType.Ocean)
             {
                 throw new InvalidOperationException("Unknown place");
             }
