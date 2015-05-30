@@ -56,7 +56,7 @@
     <Compile Include="Liskov\TexasRanger.cs" />
     <Compile Include="Liskov\Walker.cs" />
     <Compile Include="OpenClosed\Forest.cs" />
-    <Compile Include="OpenClosed\IPlace.cs" />
+    <Compile Include="OpenClosed\Place.cs" />
     <Compile Include="OpenClosed\Observer.cs" />
     <Compile Include="OpenClosed\Ocean.cs" />
     <Compile Include="OpenClosed\PlaceType.cs" />

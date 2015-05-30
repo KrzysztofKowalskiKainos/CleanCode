@@ -6,23 +6,15 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    class Ocean:IPlace
+    class Ocean:Place
     {
-        string[] ignoredSightings;
-        string result;
-        public string Environment { get; internal set; }
-        public PlaceType Type { get; internal set; }
 
-        public bool checkLength()
+        public Ocean()
         {
+            sound = "bul bul bul";
             ignoredSightings = new[] { "~" };
-            Console.WriteLine("bul bul bul");
-
-            result = Environment;
-            foreach (var ignored in ignoredSightings)
-                result = result.Replace(ignored, string.Empty);
-
-            return result.Length > 0;
         }
+
+       
     }
 }

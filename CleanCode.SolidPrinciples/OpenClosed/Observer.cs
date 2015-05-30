@@ -8,7 +8,7 @@ namespace CleanCode.SolidPrinciples.OpenClosed
 {
     public class Observer
     {
-        public bool Observe(IPlace place)
+        public bool Observe(Place place)
         {
           
             return place.checkLength();
