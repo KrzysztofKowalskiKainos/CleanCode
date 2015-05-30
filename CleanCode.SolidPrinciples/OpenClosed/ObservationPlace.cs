@@ -9,7 +9,7 @@ namespace CleanCode.SolidPrinciples
         public int LengthOfIngoredSigns(string[] ignoredSigns, string soundOfEnviroment)
         {
             string result;
-            if (this.Type != PlaceType.Forest && this.Type != PlaceType.Ocean)
+            if (!Enum.IsDefined(typeof(PlaceType),Type))
             {
                 throw new InvalidOperationException("Unknown place");
             }
