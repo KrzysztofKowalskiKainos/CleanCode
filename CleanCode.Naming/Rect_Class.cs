@@ -7,18 +7,16 @@ namespace CleanCode.Naming
 {
     class Rect_Class
     {
-        // First side
         private int sideA;
-
-        // Second side
         private int sideB;
+
         private DateTime actualTime;
+
 
         public Rect_Class(int sideA, int sideB)
         {
             this.sideA = sideA;
             this.sideB = sideB;
-
             actualTime = DateTime.Now;
         }
 
