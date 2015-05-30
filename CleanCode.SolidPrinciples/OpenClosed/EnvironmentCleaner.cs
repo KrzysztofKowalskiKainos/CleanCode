@@ -8,12 +8,12 @@ namespace CleanCode.SolidPrinciples
 {
     public class EnvironmentCleaner
     {
-        public bool cleanEnvironment(ObservationPlace place)
+        public string cleanEnvironment(ObservationPlace place)
         {
-            Console.WriteLine(place.Type.Sounds);
             string environment = place.Environment;
             environment = clean(environment, place.Type.IgnoredSightings);
-            return isEnvronmentExist(environment);
+            
+            return environment;
         }
 
         private string clean(string environment, string[] ignoredSightings)
@@ -23,7 +23,7 @@ namespace CleanCode.SolidPrinciples
             return environment;
         }
 
-        private bool isEnvronmentExist(string environment)
+        public bool isEnvironmentExist(string environment)
         {
             return environment.Length > 0;
         }
