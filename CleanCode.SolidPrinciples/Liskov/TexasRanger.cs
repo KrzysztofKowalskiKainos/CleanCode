@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.Liskov
 {
-    class TexasRange
+    class TexasRanger
     {
         public void DoRoundHouseKick()
         {

@@ -14,9 +14,12 @@ namespace CleanCode.SolidPrinciples
 
             try
             {
-                result = place.Environment;
-                foreach (var ignored in place.Type.GetIgnoredSightings())
+                result = place.environment;
+
+                foreach (var ignored in place.type.GetIgnoredSightings())
+                {
                     result = result.Replace(ignored, string.Empty);
+                }
 
                 return result.Length > 0;
             }
