@@ -5,35 +5,35 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class RectClass
+    class Rect
     {
         // First side
-        private int FirstSide;
+        private int _firstSide;
 
         // Second side
-        private int SecondSide;
-        private DateTime CreationDate;
+        private int _secondSide;
+        private DateTime _creationDate;
 
-        public RectClass(int FirstSide, int SecondSide)
+        public Rect(int FirstSide, int SecondSide)
         {
-            this.FirstSide = FirstSide;
-            this.SecondSide = SecondSide;
+            this._firstSide = FirstSide;
+            this._secondSide = SecondSide;
 
-            CreationDate = DateTime.Now;
+            _creationDate = DateTime.Now;
         }
 
         public int Field()
         {
-            return FirstSide * SecondSide;
+            return _firstSide * _secondSide;
         }
         public int CreationDateToSeconds()
         {
-           var d = (CreationDate - DateTime.Now);
+           var d = (_creationDate - DateTime.Now);
            return Convert.ToInt32(d.TotalSeconds);
         }
         public int CreationDateToMiliSeconds()
         {
-            var d = (CreationDate - DateTime.Now);
+            var d = (_creationDate - DateTime.Now);
             return Convert.ToInt32(d.TotalMilliseconds);
         }
     }
