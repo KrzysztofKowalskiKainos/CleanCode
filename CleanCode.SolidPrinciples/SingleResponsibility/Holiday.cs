@@ -11,7 +11,7 @@ namespace CleanCode.SolidPrinciples
     {
         public string HolidayName { get; private set; }
         public string LaughSound { get; private set; }
-        public string[] References {get; private set}
+        public string[] References { get; private set; }
 
         public Holiday(string holidayName, string laughSound, params string[] references)
         {

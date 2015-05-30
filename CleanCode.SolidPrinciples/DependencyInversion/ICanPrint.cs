@@ -8,6 +8,6 @@ namespace CleanCode.SolidPrinciples.DependencyInversion
 {
     interface ICanPrint
     {
-        public void Print(string textToCopy);
+        void Print(string textToCopy);
     }
 }
