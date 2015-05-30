@@ -25,19 +25,24 @@ namespace CleanCode.Naming
             return a * b;
         }
 
-        // If duration should be in seconds
-        public int durationOfExistence(bool @is)
+        private TimeSpan existenceTimeSpan() 
         {
-            var d = (createdAt - DateTime.Now);
+            return createdAt - DateTime.Now;
+        }
 
-            if (@is)
-            {
-                return (int)d.TotalMilliseconds;
-            }
-            else
-            {
-                return (int)d.TotalSeconds;
-            }
+        public int durationOfExistence(bool inMiliseconds)
+        {
+            return inMiliseconds ? durationOfExistenceInMiliseconds() : durationOfExistenceInSeconds();
+        }
+
+        public int durationOfExistenceInSeconds()
+        {
+            return (int)existenceTimeSpan().TotalSeconds;
+        }
+
+        public int durationOfExistenceInMiliseconds()
+        {
+            return (int)existenceTimeSpan().TotalMilliseconds;
         }
     }
 }
