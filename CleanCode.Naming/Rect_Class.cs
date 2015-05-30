@@ -5,34 +5,38 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class Rect_Class
+    class RectClass
     {
         // First side
-        private int _a;
+        private int _aSideLength;
 
         // Second side
-        private int b;
-        private DateTime CDATE;
+        private int bSideLength;
 
-        public Rect_Class(int a, int B)
+
+        private DateTime _date;
+
+        public bool displayType {get; set;}
+
+        public RectClass(int a, int b)
         {
-            _a = a;
-            b = B;
+            _aSideLength = a;
+            bSideLength = b;
 
-            CDATE = DateTime.Now;
+            _date = DateTime.Now;
         }
 
-        public int field()
+        public int getField()
         {
-            return _a * b;
+            return _aSideLength * bSideLength;
         }
-
+        
         // If duration should be in seconds
-        public int durationOfExistence(bool @is)
+        public int durationOfExistence()
         {
-            var d = (CDATE - DateTime.Now);
+            var d = (_date - DateTime.Now);
 
-            if (@is)
+            if (displayType)
             {
                 return (int)d.TotalMilliseconds;
             }
