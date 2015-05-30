@@ -30,9 +30,9 @@ namespace CleanCode.Naming
             return _createdAt - DateTime.Now;
         }
 
-        public int DurationOfExistence(bool InMiliseconds)
+        public int DurationOfExistence(bool InMilliseconds)
         {
-            return InMiliseconds ? DurationOfExistenceInMiliseconds() : DurationOfExistenceInSeconds();
+            return InMilliseconds ? DurationOfExistenceInMilliseconds() : DurationOfExistenceInSeconds();
         }
 
         public int DurationOfExistenceInSeconds()
@@ -40,7 +40,7 @@ namespace CleanCode.Naming
             return (int)ExistenceTimeSpan().TotalSeconds;
         }
 
-        public int DurationOfExistenceInMiliseconds()
+        public int DurationOfExistenceInMilliseconds()
         {
             return (int)ExistenceTimeSpan().TotalMilliseconds;
         }
