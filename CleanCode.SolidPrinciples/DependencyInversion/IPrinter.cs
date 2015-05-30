@@ -4,6 +4,6 @@ namespace CleanCode.SolidPrinciples.DependencyInversion
 {
     interface IPrinter
     {
-        internal void Print(string textToCopy);
+        void Print(string textToCopy);
     }
 }
