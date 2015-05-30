@@ -7,30 +7,28 @@ namespace CleanCode.Naming
 {
     class Rectangle
     {
-        // First side
-        private int _a;
-
-        // Second side
+        private int a;
         private int b;
-        private DateTime CDATE;
+
+        private DateTime createdAt;
 
         public Rectangle(int a, int B)
         {
-            _a = a;
-            b = B;
+            this.a = a;
+            this.b = B;
 
-            CDATE = DateTime.Now;
+            createdAt = DateTime.Now;
         }
 
         public int field()
         {
-            return _a * b;
+            return a * b;
         }
 
         // If duration should be in seconds
         public int durationOfExistence(bool @is)
         {
-            var d = (CDATE - DateTime.Now);
+            var d = (createdAt - DateTime.Now);
 
             if (@is)
             {
