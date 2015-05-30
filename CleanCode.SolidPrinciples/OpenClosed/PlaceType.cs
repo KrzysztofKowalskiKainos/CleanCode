@@ -2,12 +2,12 @@
 
 namespace CleanCode.SolidPrinciples
 {
-    class PlaceType
+    public abstract class PlaceType
     {
-        public abstract string[] GetIgnoredSightings();
+        abstract public string[] GetIgnoredSightings();
     }
 
-    class Forest : PlaceType
+    public class Forest : PlaceType
     {
         public override string[] GetIgnoredSightings()
         {
@@ -17,7 +17,7 @@ namespace CleanCode.SolidPrinciples
         }
     }
 
-    class Ocean : PlaceType
+    public class Ocean : PlaceType
     {
         public override string[] GetIgnoredSightings()
         {
