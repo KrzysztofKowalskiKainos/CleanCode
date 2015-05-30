@@ -14,5 +14,17 @@ namespace CleanCode.SolidPrinciples.OpenClosed
             this.IgnoredSightings = new[] { "~" };
             this.Message = "bul bul bul";
         }
+
+        public override bool ObservePlace()
+        {
+            string result;
+            Console.WriteLine(this.Message);
+
+            result = this.Environment;
+            foreach (var ignored in this.IgnoredSightings)
+                result = result.Replace(ignored, string.Empty);
+
+            return result.Length > 0;
+        }
     }
 }

@@ -10,14 +10,7 @@ namespace CleanCode.SolidPrinciples
     {
         public bool Observe(ObservationPlace place)
         {
-            string result;
-            Console.WriteLine(place.Message);
-
-            result = place.Environment;
-            foreach (var ignored in place.IgnoredSightings)
-                result = result.Replace(ignored, string.Empty);
-
-            return result.Length > 0;
+            return place.ObservePlace();
         }
     }
 }

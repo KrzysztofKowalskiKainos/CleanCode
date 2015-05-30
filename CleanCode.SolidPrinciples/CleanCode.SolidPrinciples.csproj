@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyInversion\CopyingMachine.cs" />
+    <Compile Include="DependencyInversion\PrintingMachine.cs" />
     <Compile Include="DependencyInversion\IPrinter.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
     <Compile Include="InterfaceSegregation\ILobby.cs" />
@@ -54,6 +54,7 @@
     <Compile Include="Liskov\TexasRanger.cs" />
     <Compile Include="Liskov\Walker.cs" />
     <Compile Include="OpenClosed\Forest.cs" />
+    <Compile Include="OpenClosed\IObservationPlace.cs" />
     <Compile Include="OpenClosed\ObservationPlace.cs" />
     <Compile Include="OpenClosed\Observer.cs" />
     <Compile Include="OpenClosed\Ocean.cs" />
