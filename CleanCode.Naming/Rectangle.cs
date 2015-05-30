@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class RectangleClass
+    class Rectangle
     {
         // First side
         private int _a;
@@ -16,7 +16,7 @@ namespace CleanCode.Naming
         // Creation DateTime
         private DateTime _creationDate;
 
-        public RectangleClass(int a, int b)
+        public Rectangle(int a, int b)
         {
             _a = a;
             _b = b;
@@ -24,25 +24,29 @@ namespace CleanCode.Naming
             _creationDate = DateTime.Now;
         }
 
-        public int GetField()
+        public int CalulateField()
         {
             return _a * _b;
+        }
+
+        public TimeSpan GetExistanceTime()
+        {
+            return (DateTime.Now - _creationDate);
         }
 
         // If duration should be in seconds
         public int GetExistanceDuration(bool isDurationInSeconds)
         {
-            var objectDuration = (_creationDate - DateTime.Now);
-
-            if (isDurationInSeconds)
-            {
-                
-                return (int)objectDuration.TotalSeconds;
-            }
-            else
-            {
-                return (int)objectDuration.TotalMilliseconds;
-            }
+            return isDurationInSeconds ? ObjDurationInMiliseconds() : ObjDurationInSeconds();
         }
+
+        private int ObjDurationInSeconds (){
+            return (int) GetExistanceTime().TotalSeconds;
+        }
+
+        private int ObjDurationInMiliseconds (){
+            return (int) GetExistanceTime().TotalSeconds;
+        }
+
     }
 }
