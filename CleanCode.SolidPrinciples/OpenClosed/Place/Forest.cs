@@ -1,11 +1,8 @@
-﻿using System;
-
-namespace CleanCode.SolidPrinciples.OpenClosed.Place
+﻿namespace CleanCode.SolidPrinciples.OpenClosed.Place
 {
     class Forest : IPlace
     {
-
-        public bool Observe(string environment)
+        public int ObservedElements(string environment)
         {
             var ignoredSightings = new[] { "|", "@" };
 
@@ -13,7 +10,7 @@ namespace CleanCode.SolidPrinciples.OpenClosed.Place
             foreach (var ignored in ignoredSightings)
                 result = result.Replace(ignored, string.Empty);
 
-            return result.Length > 0;
+            return result.Length;
         }
 
         public string Sound()

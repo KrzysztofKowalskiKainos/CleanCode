@@ -12,9 +12,9 @@ namespace CleanCode.SolidPrinciples
             return place.Sound();
         }
 
-        internal bool Observe()
+        public bool IsSomethingObserved()
         {
-           return place.Observe(this.environment);
+            return place.ObservedElements(this.environment) > 0;
         }
     }
 }

@@ -6,8 +6,9 @@ namespace CleanCode.SolidPrinciples
     {
         public bool Observe(ObservationPlace place)
         {
-            Console.WriteLine(place.Sound());
-            return place.Observe();
+            place.Sound();
+
+            return place.IsSomethingObserved();
         }
     }
 }

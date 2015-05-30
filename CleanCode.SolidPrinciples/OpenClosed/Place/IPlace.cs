@@ -2,8 +2,8 @@
 {
     public interface IPlace
     {
-        bool Observe(string environment);
-
         string Sound();
+
+        int ObservedElements(string environment);
     }
 }
