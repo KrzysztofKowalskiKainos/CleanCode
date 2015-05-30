@@ -23,7 +23,7 @@ namespace CleanCode.Naming
             return _firstSide * _secondSide;
         }
 
-        public int getDuration(bool inSeconds)
+        public int getExistenceDuration(bool inSeconds)
         {
             var duration = (_creationDate - DateTime.Now);
 
