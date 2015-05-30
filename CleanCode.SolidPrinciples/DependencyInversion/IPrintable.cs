@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.DependencyInversion
 {
-    interface IPrinter
+    interface IPrintable
     {
          void Print(string textToCopy);
     }

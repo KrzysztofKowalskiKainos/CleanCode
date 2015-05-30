@@ -2,7 +2,7 @@
 
 namespace CleanCode.SolidPrinciples.DependencyInversion
 {
-    public class Printer : IPrinter
+    public class Printer : IPrintable
     {
         public void Print(string textToCopy)
         {

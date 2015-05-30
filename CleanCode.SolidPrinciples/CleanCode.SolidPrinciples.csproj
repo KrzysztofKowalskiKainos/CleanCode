@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
-    <Compile Include="DependencyInversion\IPrinter.cs" />
+    <Compile Include="DependencyInversion\IPrintable.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
     <Compile Include="InterfaceSegregation\ILobbyAllPlayersActions.cs" />
     <Compile Include="InterfaceSegregation\ILobbyMessageActions.cs" />

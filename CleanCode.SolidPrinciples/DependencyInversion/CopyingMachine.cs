@@ -9,9 +9,9 @@ namespace CleanCode.SolidPrinciples.DependencyInversion
 
     class CopyingMachine
     {
-        private IPrinter _printer;
+        private IPrintable _printer;
 
-        public CopyingMachine(IPrinter printer)
+        public CopyingMachine(IPrintable printer)
         {
             _printer = printer;
         }
