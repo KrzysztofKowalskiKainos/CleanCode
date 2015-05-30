@@ -30,7 +30,6 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
     {
 
         void Confirm(Request request);
-  
 
         void MessageReceived(string player);
 
