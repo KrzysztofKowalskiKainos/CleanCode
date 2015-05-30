@@ -13,13 +13,13 @@ namespace CleanCode.Naming
         {
             var rectangle = new Rectangle(10, 20);
 
-            Console.WriteLine(rectangle.field());
+            Console.WriteLine(rectangle.Field());
 
             Thread.Sleep(10);
-            Console.WriteLine(rectangle.durationOfExistence(false));
+            Console.WriteLine(rectangle.DurationOfExistence(false));
 
             Thread.Sleep(1002);
-            Console.WriteLine(rectangle.durationOfExistence(true));
+            Console.WriteLine(rectangle.DurationOfExistence(true));
         }
     }
 }

@@ -20,29 +20,29 @@ namespace CleanCode.Naming
             _createdAt = DateTime.Now;
         }
 
-        public int field()
+        public int Field()
         {
             return _a * _b;
         }
 
-        private TimeSpan existenceTimeSpan() 
+        private TimeSpan ExistenceTimeSpan() 
         {
             return _createdAt - DateTime.Now;
         }
 
-        public int durationOfExistence(bool InMiliseconds)
+        public int DurationOfExistence(bool InMiliseconds)
         {
-            return InMiliseconds ? durationOfExistenceInMiliseconds() : durationOfExistenceInSeconds();
+            return InMiliseconds ? DurationOfExistenceInMiliseconds() : DurationOfExistenceInSeconds();
         }
 
-        public int durationOfExistenceInSeconds()
+        public int DurationOfExistenceInSeconds()
         {
-            return (int)existenceTimeSpan().TotalSeconds;
+            return (int)ExistenceTimeSpan().TotalSeconds;
         }
 
-        public int durationOfExistenceInMiliseconds()
+        public int DurationOfExistenceInMiliseconds()
         {
-            return (int)existenceTimeSpan().TotalMilliseconds;
+            return (int)ExistenceTimeSpan().TotalMilliseconds;
         }
     }
 }
