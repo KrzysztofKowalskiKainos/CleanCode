@@ -24,15 +24,4 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         void AllOut();
     }
-
-    public interface IRequestHandler
-    {
-        void Confirm(Request request);
-
-        Response Answer(Request request);
-    }
-
-    public class Response { } 
-
-    public class Request { }
 }
