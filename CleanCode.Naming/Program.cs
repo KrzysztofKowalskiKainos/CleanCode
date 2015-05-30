@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace CleanCode.Naming
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            var rectangle = new Rect_Class(10, 20);
+            var rectangle = new Rectangle(10, 20);
 
-            Console.WriteLine(rectangle.field());
+            Console.WriteLine(rectangle.Field);
 
             Thread.Sleep(10);
-            Console.WriteLine(rectangle.durationOfExistence(false));
+            Console.WriteLine(rectangle.ExistenceTimeInSeconds());
 
             Thread.Sleep(1002);
-            Console.WriteLine(rectangle.durationOfExistence(true));
+            Console.WriteLine(rectangle.ExistenceTimeInMilliseconds());
         }
     }
 }
