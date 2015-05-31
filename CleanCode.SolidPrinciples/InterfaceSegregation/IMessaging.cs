@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples.DependencyInversion
+namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    interface IPrinters
+    interface IMessaging
     {
-         void Print(string textToCopy);
+        void MessageReceived(string player);
     }
 }

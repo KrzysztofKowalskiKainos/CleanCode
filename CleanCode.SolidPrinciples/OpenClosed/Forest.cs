@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 using CleanCode.SolidPrinciples.OpenClosed;
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    class Forest : PlaceType
+    class Forest : ObservationPlace
     {
-        private string[] ignoredSightings = new[] { "|", "@" };
-        string result;
+       
+        
         public Forest()
         {
-            Console.WriteLine("<Forest Sounds>");
+            environmentSound = "<Forest Sounds>";
+            ignoredSightings = new[] { "|", "@" };
         }
-        public override string getEnvironement()
-        {
-            result = "Forest";
-            foreach (var ignored in ignoredSightings)
-                result = result.Replace(ignored, string.Empty);
-            return result;
-        }
-
+    
     }
 }

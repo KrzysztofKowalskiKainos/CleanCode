@@ -9,18 +9,11 @@ namespace CleanCode.SolidPrinciples
 {
     public class Observer
     {
-        public bool Observe(PlaceType place)
+        public bool Observe(ObservationPlace place)
         {
+            return place.getLength()>0;
 
-
-            place.getEnvironement();
-
-
-            return true;
-
-
-         
-            }
         }
     }
+}
 

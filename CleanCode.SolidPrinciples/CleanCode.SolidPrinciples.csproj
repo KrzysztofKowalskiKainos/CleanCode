@@ -43,10 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
-    <Compile Include="DependencyInversion\IPrinters.cs" />
+    <Compile Include="DependencyInversion\IPrinterable.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
     <Compile Include="InterfaceSegregation\AnswerAndConfirm.cs" />
     <Compile Include="InterfaceSegregation\ILobby.cs" />
+    <Compile Include="InterfaceSegregation\IMessaging.cs" />
     <Compile Include="InterfaceSegregation\IPlayerTimer.cs" />
     <Compile Include="InterfaceSegregation\IPlayer.cs" />
     <Compile Include="InterfaceSegregation\Request.cs" />
@@ -63,7 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleResponsibility\Laugh.cs" />
     <Compile Include="SingleResponsibility\References.cs" />
-    <Compile Include="SingleResponsibility\StringHolidaysUtils.cs" />
+    <Compile Include="SingleResponsibility\Holidays.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
