@@ -9,7 +9,6 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
     public interface ILobby
     {
         void AllIn();
-
         void AllOut();
     }
 

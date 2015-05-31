@@ -8,6 +8,8 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
     interface IMessaging
     {
+        void Confirm(Request request);
+        Response Answer(Request request);
         void MessageReceived(string player);
     }
 }

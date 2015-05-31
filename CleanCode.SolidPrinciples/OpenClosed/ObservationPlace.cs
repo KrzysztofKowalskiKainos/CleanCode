@@ -4,7 +4,7 @@ namespace CleanCode.SolidPrinciples
     public class ObservationPlace
     {
         public string environment { get; internal set; }
-        public PlaceType Type { get; internal set; }
+        protected PlaceType Type { get; internal set; }
         protected string[] ignoredSightings = new[] {"Observation Place"};
         protected string environmentSound;
         public int getLength()
