@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    public class Observer
+    class Ocean:Place
     {
-        public bool Observe(Place place)
+
+        public Ocean()
         {
-          
-            return place.checkLength();
-          
+            sound = "bul bul bul";
+            ignoredSightings = new[] { "~" };
         }
+
+       
     }
 }

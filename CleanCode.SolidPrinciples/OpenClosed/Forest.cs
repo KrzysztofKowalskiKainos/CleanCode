@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.OpenClosed
 {
-    public class Observer
+    class Forest:Place
     {
-        public bool Observe(Place place)
+       
+       
+
+        public Forest()
         {
-          
-            return place.checkLength();
-          
+            ignoredSightings = new[] { "|", "@" };
+            sound = "<Forest Sounds>";
         }
+
+        
     }
 }
