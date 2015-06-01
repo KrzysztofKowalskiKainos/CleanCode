@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    interface PlayerTimer
     {
-        void AllIn();
+        void PausePlayerTimer(string player);
 
-        void AllOut();
+        void RefreshPlayerTimer(string player);
     }
 }

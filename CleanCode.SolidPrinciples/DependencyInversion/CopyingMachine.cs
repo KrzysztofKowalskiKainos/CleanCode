@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples.DependencyInversion
+namespace CleanCode.SolidPrinciples
 {
-    class CopyingMachine
+    public class CopyingMachine
     {
         private Printer _printer;
 

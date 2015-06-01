@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples
+namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    public interface Printer
+    class Holiday
     {
-        void Print(string textToPrint);
+        public string HolidayName { get; private set; }
     }
 }
