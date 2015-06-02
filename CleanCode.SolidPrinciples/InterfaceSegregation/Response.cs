@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    class Response
     {
-        void AllIn();
-
-        void AllOut();
     }
 }

@@ -10,6 +10,13 @@ namespace CleanCode.SolidPrinciples
     {
         static void Main(string[] args)
         {
+            ObservationPlace place = new ObservationPlace();
+            place.Environment = "|||sadsa";
+            place.Type = PlaceType.FOREST;
+            Observer observer = new Observer();
+
+            observer.Observe(place);
+            Console.ReadLine();
         }
     }
 }

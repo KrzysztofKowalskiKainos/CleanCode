@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples.InterfaceSegregation
+namespace CleanCode.SolidPrinciples.SingleResponsibility
 {
-    public interface ILobby
+    class Holiday
     {
-        void AllIn();
-
-        void AllOut();
+        public string HolidayName { get; private set; }
     }
 }

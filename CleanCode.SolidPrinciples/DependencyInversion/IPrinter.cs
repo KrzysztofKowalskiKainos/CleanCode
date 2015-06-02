@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples.InterfaceSegregation
+namespace CleanCode.SolidPrinciples
 {
-    public interface ILobby
+    public interface IPrinter
     {
-        void AllIn();
-
-        void AllOut();
+        void Print(string textToPrint);
     }
 }
