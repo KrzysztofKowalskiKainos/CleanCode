@@ -7,9 +7,9 @@ namespace CleanCode.StringKata.Test
     public class StringCalculatorTest
     {
         [TestMethod]
-        public void When_CalculateIsCalled_TestNothing()
+        public void TestEmptyStringShouldEqualsToZero()
         {
-            Assert.Fail();
+            Assert.AreEqual(0, StringCalculator.Calculate(""));
         }
     }
 }

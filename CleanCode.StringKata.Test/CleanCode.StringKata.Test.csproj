@@ -53,6 +53,12 @@
     <Compile Include="StringCalculatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CleanCode.StringKata\CleanCode.StringKata.csproj">
+      <Project>{7259d066-6a58-494a-8a17-71e0999e6860}</Project>
+      <Name>CleanCode.StringKata</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
