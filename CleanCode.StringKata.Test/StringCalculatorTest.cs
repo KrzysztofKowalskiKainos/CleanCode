@@ -62,6 +62,13 @@ namespace CleanCode.StringKata.Test
         {
             _calculator.Add("1,2,3,-1,4,5");
         }
+
+        [TestMethod]
+        [ExpectedExceptionWithMessage(typeof(System.ArgumentException), "Negatives not allowed: -2, -1, -5")]
+        public void TestManyNegativesWillThrowException()
+        {
+            _calculator.Add("1,-2,3,-1,4,-5");
+        }
     }
 
     // @see http://stackoverflow.com/a/9152420/17405
