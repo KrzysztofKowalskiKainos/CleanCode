@@ -8,9 +8,9 @@ namespace CleanCode.StringKata
 {
     public class StringCalculator
     {
-        private static char _defaultSeparator = ',';
+        private char _defaultSeparator = ',';
 
-        public static int Add(string input)
+        public int Add(string input)
         {
             if (IsStringEmpty(input))
             {
@@ -20,14 +20,14 @@ namespace CleanCode.StringKata
             return HandleString(input);
         }
 
-        private static int HandleString(string input)
+        private int HandleString(string input)
         {
             string[] elements = ExtractElements(input);
 
             return HandleElements(elements);
         }
 
-        private static int HandleElements(string[] elements)
+        private int HandleElements(string[] elements)
         {
             int sum = 0;
             foreach (string element in elements)
@@ -38,29 +38,29 @@ namespace CleanCode.StringKata
             return sum;
         }
 
-        private static int HandleElement(string element)
+        private int HandleElement(string element)
         {
             return int.Parse(element);
         }
 
-        private static string[] ExtractElements(string input)
+        private string[] ExtractElements(string input)
         {
             input = ReplaceSeparators(input);
 
             return input.Split(_defaultSeparator);
         }
 
-        private static string ReplaceSeparators(string input)
+        private string ReplaceSeparators(string input)
         {
             return input.Replace('\n', _defaultSeparator);
         }
 
-        private static int HandleEmptyString()
+        private int HandleEmptyString()
         {
             return 0;
         }
 
-        private static bool IsStringEmpty(string input)
+        private bool IsStringEmpty(string input)
         {
             return 0 == input.Length;
         }
