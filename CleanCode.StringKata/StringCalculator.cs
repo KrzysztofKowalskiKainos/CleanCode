@@ -8,6 +8,8 @@ namespace CleanCode.StringKata
 {
     public class StringCalculator
     {
+        private static char _defaultSeparator = ',';
+
         public static int Add(string input)
         {
             if (IsStringEmpty(input))
@@ -43,11 +45,14 @@ namespace CleanCode.StringKata
 
         private static string[] ExtractElements(string input)
         {
-            char defaultSeparator = ',';
+            input = ReplaceSeparators(input);
 
-            input = input.Replace('\n', defaultSeparator);
+            return input.Split(_defaultSeparator);
+        }
 
-            return input.Split(defaultSeparator);
+        private static string ReplaceSeparators(string input)
+        {
+            return input.Replace('\n', _defaultSeparator);
         }
 
         private static int HandleEmptyString()
