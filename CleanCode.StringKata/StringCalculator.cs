@@ -8,7 +8,7 @@ namespace CleanCode.StringKata
 {
     public class StringCalculator
     {
-        public static int Calculate(string input)
+        public static int Add(string input)
         {
             if (IsStringEmpty(input))
             {
