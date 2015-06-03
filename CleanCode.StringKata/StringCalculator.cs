@@ -89,8 +89,16 @@ namespace CleanCode.StringKata
 
             if (input.StartsWith("//"))
             {
-                _defaultSeparator = input[2].ToString();
-                input = input.Substring(4);
+                input = input.Substring(2);
+
+                int separatorLength = input.IndexOf('\n');
+                _defaultSeparator = input.Substring(0, separatorLength);
+                if (_defaultSeparator.StartsWith("[") && _defaultSeparator.EndsWith("]"))
+                {
+                    _defaultSeparator = _defaultSeparator.Substring(1, _defaultSeparator.Length - 2);
+                }
+                
+                input = input.Substring(separatorLength + 1);
             }
 
             return input;
