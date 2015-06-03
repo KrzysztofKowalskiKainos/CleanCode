@@ -45,15 +45,30 @@ namespace CleanCode.StringKata
 
         private string[] ExtractElements(string input)
         {
+            input = Normalize(input);
+
+            return input.Split(_defaultSeparator);
+        }
+
+        private string Normalize(string input)
+        {
+            input = RemoveSeparatorConfiguration(input);
+            input = ReplaceSeparators(input);
+
+            return input;
+        }
+
+        private string RemoveSeparatorConfiguration(string input)
+        {
+            _defaultSeparator = ',';
+
             if (input.StartsWith("//"))
             {
                 _defaultSeparator = (input.ToCharArray())[2];
                 input = input.Substring(4);
             }
 
-            input = ReplaceSeparators(input);
-
-            return input.Split(_defaultSeparator);
+            return input;
         }
 
         private string ReplaceSeparators(string input)
