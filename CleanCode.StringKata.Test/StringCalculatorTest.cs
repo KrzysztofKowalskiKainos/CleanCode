@@ -11,5 +11,11 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(0, StringCalculator.Calculate(""));
         }
+
+        [TestMethod]
+        public void TestSingleElementString()
+        {
+            Assert.AreEqual(1, StringCalculator.Calculate("1"));
+        }
     }
 }
