@@ -29,13 +29,25 @@ namespace CleanCode.StringKata
 
         private int HandleElements(string[] elements)
         {
-            int sum = 0;
-            foreach (string element in elements)
+            List<int> numbers = ConvertToNumbers(elements);
+
+            int[] negatives = numbers.Where(number => number < 0).ToArray();
+            if (negatives.Length > 0)
             {
-                sum += HandleElement(element);
+                throw new System.ArgumentException("negatives not allowed");
             }
 
-            return sum;
+            return numbers.Sum();
+        }
+
+        private List<int> ConvertToNumbers(string[] elements)
+        {
+            List<int> numbers = new List<int>();
+            foreach (string element in elements)
+            {
+                numbers.Add(HandleElement(element));
+            }
+            return numbers;
         }
 
         private int HandleElement(string element)

@@ -55,5 +55,12 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(3, _calculator.Add("//;\n1;2"));
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(System.ArgumentException))]
+        public void TestNegativeWillThrowException()
+        {
+            _calculator.Add("1,2,3,-1,4,5");
+        }
     }
 }
