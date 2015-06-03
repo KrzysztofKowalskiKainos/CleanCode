@@ -23,5 +23,11 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(2, StringCalculator.Calculate("2"));
         }
+
+        [TestMethod]
+        public void Test1comma2()
+        {
+            Assert.AreEqual(3, StringCalculator.Calculate("1,2"));
+        }
     }
 }

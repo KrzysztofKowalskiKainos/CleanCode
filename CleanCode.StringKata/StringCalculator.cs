@@ -20,7 +20,14 @@ namespace CleanCode.StringKata
 
         private static int HandleString(string input)
         {
-            return int.Parse(input);
+            string[] numbers = input.Split(',');
+
+            int sum = 0;
+            foreach (string number in numbers) {
+                sum += int.Parse(number);
+            }
+
+            return sum;
         }
 
         private static int HandleEmptyString()
