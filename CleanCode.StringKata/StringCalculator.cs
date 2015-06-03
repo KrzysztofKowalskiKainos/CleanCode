@@ -8,7 +8,7 @@ namespace CleanCode.StringKata
 {
     public class StringCalculator
     {
-        private char _defaultSeparator = ',';
+        private string _defaultSeparator = ",";
 
         public int Add(string input)
         {
@@ -72,7 +72,7 @@ namespace CleanCode.StringKata
         {
             input = Normalize(input);
 
-            return input.Split(_defaultSeparator);
+            return input.Split(new string[] { _defaultSeparator }, StringSplitOptions.None);
         }
 
         private string Normalize(string input)
@@ -85,11 +85,11 @@ namespace CleanCode.StringKata
 
         private string RemoveSeparatorConfiguration(string input)
         {
-            _defaultSeparator = ',';
+            _defaultSeparator = ",";
 
             if (input.StartsWith("//"))
             {
-                _defaultSeparator = (input.ToCharArray())[2];
+                _defaultSeparator = input[2].ToString();
                 input = input.Substring(4);
             }
 
@@ -98,7 +98,7 @@ namespace CleanCode.StringKata
 
         private string ReplaceSeparators(string input)
         {
-            return input.Replace('\n', _defaultSeparator);
+            return input.Replace("\n", _defaultSeparator);
         }
 
         private int HandleEmptyString()

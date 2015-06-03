@@ -81,6 +81,12 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(10, _calculator.Add("//x\n1x2x1001x3x1337x4"));
         }
+
+        [TestMethod]
+        public void TestAnyLengthDelimiters()
+        {
+            Assert.AreEqual(6, _calculator.Add("//[***]\n1***2***3"));
+        }
     }
 
     // @see http://stackoverflow.com/a/9152420/17405
