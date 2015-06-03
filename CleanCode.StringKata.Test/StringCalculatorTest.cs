@@ -93,6 +93,12 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(6, _calculator.Add("//[*][%]\n1*2%3"));
         }
+
+        [TestMethod]
+        public void TestManyDelimitersLongerThanOneChar()
+        {
+            Assert.AreEqual(15, _calculator.Add("//[***][%][delimiter]\n1***2%3delimiter4delimiter5"));
+        }
     }
 
     // @see http://stackoverflow.com/a/9152420/17405
