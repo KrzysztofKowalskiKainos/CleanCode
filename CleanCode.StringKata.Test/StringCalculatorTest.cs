@@ -87,6 +87,12 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(6, _calculator.Add("//[***]\n1***2***3"));
         }
+
+        [TestMethod]
+        public void TestManyDelimiters()
+        {
+            Assert.AreEqual(6, _calculator.Add("//[*][%]\n1*2%3"));
+        }
     }
 
     // @see http://stackoverflow.com/a/9152420/17405
