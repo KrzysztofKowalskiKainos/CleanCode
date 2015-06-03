@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.DependencyInversion
 {
-    class CopyingMachine
+    class PrinterCopyingMachine : ICanCopy, ICanPrint
     {
-        private Printer _printer;
-
-        public CopyingMachine(Printer printer)
+        public void Print(string textToCopy)
         {
-            _printer = printer;
+            Console.WriteLine(textToCopy);
         }
 
         public void Copy(string textToCopy, int nrOfCopies)
         {
-            for(int i=0; i<nrOfCopies; i++)
+            for (int i = 0; i < nrOfCopies; i++)
             {
-                _printer.Print(textToCopy);
+                Print(textToCopy);
             }
         }
     }
