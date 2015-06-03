@@ -29,5 +29,11 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(3, StringCalculator.Add("1,2"));
         }
+
+        [TestMethod]
+        public void TestUnknownAmountOfNumbers()
+        {
+            Assert.AreEqual(21, StringCalculator.Add("1,2,3,4,5,6"));
+        }
     }
 }
