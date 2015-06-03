@@ -69,6 +69,18 @@ namespace CleanCode.StringKata.Test
         {
             _calculator.Add("1,-2,3,-1,4,-5");
         }
+
+        [TestMethod]
+        public void TestIgnoringBiggerThan1000()
+        {
+            Assert.AreEqual(0, _calculator.Add("1001"));
+        }
+
+        [TestMethod]
+        public void TestIgnoringManyBiggerThan1000()
+        {
+            Assert.AreEqual(10, _calculator.Add("//x\n1x2x1001x3x1337x4"));
+        }
     }
 
     // @see http://stackoverflow.com/a/9152420/17405

@@ -33,7 +33,15 @@ namespace CleanCode.StringKata
 
             ValidateNumbers(numbers);
 
+            numbers = FilterOutTooBigNumbers(numbers);
+
             return numbers.Sum();
+        }
+
+        private static List<int> FilterOutTooBigNumbers(List<int> numbers)
+        {
+            numbers = numbers.Where(number => number < 1000).ToList();
+            return numbers;
         }
 
         private static void ValidateNumbers(List<int> numbers)
