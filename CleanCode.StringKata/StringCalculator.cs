@@ -45,6 +45,12 @@ namespace CleanCode.StringKata
 
         private string[] ExtractElements(string input)
         {
+            if (input.StartsWith("//"))
+            {
+                _defaultSeparator = (input.ToCharArray())[2];
+                input = input.Substring(4);
+            }
+
             input = ReplaceSeparators(input);
 
             return input.Split(_defaultSeparator);

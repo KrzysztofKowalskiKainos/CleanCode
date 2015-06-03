@@ -49,5 +49,11 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(6, _calculator.Add("1\n2,3"));
         }
+
+        [TestMethod]
+        public void TestSeparatorCanBeConfigured()
+        {
+            Assert.AreEqual(3, _calculator.Add("//;\n1;2"));
+        }
     }
 }
