@@ -35,5 +35,11 @@ namespace CleanCode.StringKata.Test
         {
             Assert.AreEqual(21, StringCalculator.Add("1,2,3,4,5,6"));
         }
+
+        [TestMethod]
+        public void TestNewLineIsAllowedSeparator()
+        {
+            Assert.AreEqual(6, StringCalculator.Add("1\n2,3"));
+        }
     }
 }

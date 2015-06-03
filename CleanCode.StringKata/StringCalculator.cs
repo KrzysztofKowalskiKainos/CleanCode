@@ -43,6 +43,8 @@ namespace CleanCode.StringKata
 
         private static string[] ExtractElements(string input)
         {
+            input = input.Replace('\n', ',');
+
             return input.Split(',');
         }
 
