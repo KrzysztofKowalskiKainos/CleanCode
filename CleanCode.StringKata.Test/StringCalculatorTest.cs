@@ -57,10 +57,41 @@ namespace CleanCode.StringKata.Test
         }
 
         [TestMethod]
-        [ExpectedException(typeof(System.ArgumentException))]
+        [ExpectedExceptionWithMessage(typeof(System.ArgumentException), "Negatives not allowed: -1")]
         public void TestNegativeWillThrowException()
         {
             _calculator.Add("1,2,3,-1,4,5");
+        }
+    }
+
+    // @see http://stackoverflow.com/a/9152420/17405
+    public sealed class ExpectedExceptionWithMessage : ExpectedExceptionBaseAttribute
+    {
+        private Type _expectedExceptionType;
+        private string _expectedExceptionMessage;
+
+        public ExpectedExceptionWithMessage(Type expectedExceptionType)
+        {
+            _expectedExceptionType = expectedExceptionType;
+            _expectedExceptionMessage = string.Empty;
+        }
+
+        public ExpectedExceptionWithMessage(Type expectedExceptionType, string expectedExceptionMessage)
+        {
+            _expectedExceptionType = expectedExceptionType;
+            _expectedExceptionMessage = expectedExceptionMessage;
+        }
+
+        protected override void Verify(Exception exception)
+        {
+            Assert.IsNotNull(exception);
+
+            Assert.IsInstanceOfType(exception, _expectedExceptionType, "Wrong type of exception was thrown.");
+
+            if(!_expectedExceptionMessage.Length.Equals(0))
+            {
+                Assert.AreEqual(_expectedExceptionMessage, exception.Message, "Wrong exception message was returned.");
+            }
         }
     }
 }

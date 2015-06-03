@@ -34,7 +34,7 @@ namespace CleanCode.StringKata
             int[] negatives = numbers.Where(number => number < 0).ToArray();
             if (negatives.Length > 0)
             {
-                throw new System.ArgumentException("negatives not allowed");
+                throw new System.ArgumentException("Negatives not allowed: " + String.Join(", ", negatives));
             }
 
             return numbers.Sum();
