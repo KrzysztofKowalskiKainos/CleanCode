@@ -31,13 +31,18 @@ namespace CleanCode.StringKata
         {
             List<int> numbers = ConvertToNumbers(elements);
 
+            ValidateNumbers(numbers);
+
+            return numbers.Sum();
+        }
+
+        private static void ValidateNumbers(List<int> numbers)
+        {
             int[] negatives = numbers.Where(number => number < 0).ToArray();
             if (negatives.Length > 0)
             {
                 throw new System.ArgumentException("Negatives not allowed: " + String.Join(", ", negatives));
             }
-
-            return numbers.Sum();
         }
 
         private List<int> ConvertToNumbers(string[] elements)
