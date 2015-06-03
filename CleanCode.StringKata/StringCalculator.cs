@@ -10,12 +10,27 @@ namespace CleanCode.StringKata
     {
         public static int Calculate(string input)
         {
-            if (0 == input.Length)
+            if (IsStringEmpty(input))
             {
-                return 0;
+                return HandleEmptyString();
             }
 
+            return HandleString(input);
+        }
+
+        private static int HandleString(string input)
+        {
             return int.Parse(input);
+        }
+
+        private static int HandleEmptyString()
+        {
+            return 0;
+        }
+
+        private static bool IsStringEmpty(string input)
+        {
+            return 0 == input.Length;
         }
     }
 }
