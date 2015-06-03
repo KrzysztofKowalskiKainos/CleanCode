@@ -78,31 +78,46 @@ namespace CleanCode.StringKata
         {
             if (input.StartsWith("//"))
             {
-                input = input.Substring(2);
-
-                int separatorsLength = input.IndexOf('\n');
-                string separators = input.Substring(0, separatorsLength);
-
-                if (separators.StartsWith("[") && separators.EndsWith("]"))
-                {
-                    separators = separators.Substring(1, separators.Length - 2);
-                }
-
-                foreach (string separator in separators.Split(new string[] { "][" }, StringSplitOptions.None))
-                {
-                    _separators.Add(separator);
-                }
-                                
-                input = input.Substring(separatorsLength + 1);
+                input = ExtractSeparators(input);
             }
             else
             {
-                _separators.Add(",");
+                SetupDefaultSeparators();
             }
 
-            // newline is always allowed as a separator
-            _separators.Add("\n");
+            AddAlwaysUsedSeparators();
 
+            return input;
+        }
+
+        private void AddAlwaysUsedSeparators()
+        {
+            _separators.Add("\n");
+        }
+
+        private void SetupDefaultSeparators()
+        {
+            _separators.Add(",");
+        }
+
+        private string ExtractSeparators(string input)
+        {
+            input = input.Substring(2);
+
+            int separatorsLength = input.IndexOf('\n');
+            string separators = input.Substring(0, separatorsLength);
+
+            if (separators.StartsWith("[") && separators.EndsWith("]"))
+            {
+                separators = separators.Substring(1, separators.Length - 2);
+            }
+
+            foreach (string separator in separators.Split(new string[] { "][" }, StringSplitOptions.None))
+            {
+                _separators.Add(separator);
+            }
+
+            input = input.Substring(separatorsLength + 1);
             return input;
         }
 
