@@ -102,23 +102,33 @@ namespace CleanCode.StringKata
 
         private string ExtractSeparators(string input)
         {
-            input = input.Substring(2);
-
             int separatorsLength = input.IndexOf('\n');
-            string separators = input.Substring(0, separatorsLength);
+            string separatorsDefinition = input.Substring(2, separatorsLength - 2);
 
-            if (separators.StartsWith("[") && separators.EndsWith("]"))
-            {
-                separators = separators.Substring(1, separators.Length - 2);
-            }
+            separatorsDefinition = RemoveBoundariesFromSeparators(separatorsDefinition);
+            string[] separators = SplitSeparators(separatorsDefinition);
 
-            foreach (string separator in separators.Split(new string[] { "][" }, StringSplitOptions.None))
+            foreach (string separator in separators)
             {
                 _separators.Add(separator);
             }
 
             input = input.Substring(separatorsLength + 1);
             return input;
+        }
+
+        private static string[] SplitSeparators(string separators)
+        {
+            return separators.Split(new string[] { "][" }, StringSplitOptions.None);
+        }
+
+        private static string RemoveBoundariesFromSeparators(string separators)
+        {
+            if (separators.StartsWith("[") && separators.EndsWith("]"))
+            {
+                separators = separators.Substring(1, separators.Length - 2);
+            }
+            return separators;
         }
 
         private int HandleEmptyString()
