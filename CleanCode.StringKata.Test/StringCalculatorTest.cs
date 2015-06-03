@@ -13,9 +13,15 @@ namespace CleanCode.StringKata.Test
         }
 
         [TestMethod]
-        public void TestSingleElementString()
+        public void Test1()
         {
             Assert.AreEqual(1, StringCalculator.Calculate("1"));
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            Assert.AreEqual(2, StringCalculator.Calculate("2"));
         }
     }
 }

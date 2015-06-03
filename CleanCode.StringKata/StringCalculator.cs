@@ -10,11 +10,12 @@ namespace CleanCode.StringKata
     {
         public static int Calculate(string input)
         {
-            if (1 == input.Length)
+            if (0 == input.Length)
             {
-                return 1;
+                return 0;
             }
-            return 0;
+
+            return int.Parse(input);
         }
     }
 }
