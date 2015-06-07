@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples
 {
-    class TexasRanger
+    class RichPrinter : IPrinter
     {
-        public void DoRoundHouseKick()
+        public void Print(string message)
         {
-            Console.WriteLine("Hyiaa!");
+            Console.WriteLine("!!!" + message);
         }
-
     }
 }

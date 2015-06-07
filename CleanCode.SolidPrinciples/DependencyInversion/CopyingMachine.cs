@@ -4,23 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCode.SolidPrinciples.DependencyInversion
+namespace CleanCode.SolidPrinciples
 {
     class CopyingMachine
     {
-        private Printer _printer;
+        IPrinter printer;
 
-        public CopyingMachine(Printer printer)
+        public CopyingMachine(IPrinter printer)
         {
-            _printer = printer;
+            this.printer = printer;
         }
 
+
+        // coś w ten deseń ? 
         public void Copy(string textToCopy, int nrOfCopies)
         {
             for(int i=0; i<nrOfCopies; i++)
             {
-                _printer.Print(textToCopy);
+                printer.Print(textToCopy);
             }
         }
+
     }
 }
