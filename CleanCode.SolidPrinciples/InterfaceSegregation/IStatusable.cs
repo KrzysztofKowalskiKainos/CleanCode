@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    public interface IStatusable
     {
-        void AllIn();
-        void AllOut();
-
-        void AddPlayer(string newPlayer);
-        void KickPlayer(string player);
+        IEnumerable<string> GetPlayerStatus(string player);
     }
 }

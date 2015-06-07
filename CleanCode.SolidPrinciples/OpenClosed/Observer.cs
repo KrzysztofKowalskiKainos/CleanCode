@@ -10,29 +10,12 @@ namespace CleanCode.SolidPrinciples
     {
         public bool Observe(ObservationPlace place)
         {
-            string[] ignoredSightings;
-            string result;
-
             switch (place.Type)
             {
                 case PlaceType.Forest:
-                    ignoredSightings = new[] { "|", "@" };
-                    Console.WriteLine("<Forest Sounds>");
-
-                    result = place.Environment;
-                    foreach (var ignored in ignoredSightings)
-                        result = result.Replace(ignored, string.Empty);
-
-                    return result.Length > 0;
                 case PlaceType.Ocean:
-                    ignoredSightings = new[] { "~" };
-                    Console.WriteLine("bul bul bul");
-
-                    result = place.Environment;
-                    foreach (var ignored in ignoredSightings)
-                        result = result.Replace(ignored, string.Empty);
-
-                    return result.Length > 0;
+                    Console.WriteLine(place.Sound);
+                    return place.HasSightings();
                 default:
                     throw new InvalidOperationException("Unknown place");
             }
