@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    public interface IPlayerManager
     {
         void AllIn();
 
@@ -16,10 +16,6 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         IEnumerable<string> GetPlayerStatus(string player);
 
-        void Confirm(Request request);
-
-        Response Answer(Request request);
-
         void PausePlayerTimer(string player);
 
         void RefreshPlayerTimer(string player);
@@ -28,8 +24,4 @@ namespace CleanCode.SolidPrinciples.InterfaceSegregation
 
         void AllOut();
     }
-
-    public class Response { } 
-
-    public class Request { }
 }
