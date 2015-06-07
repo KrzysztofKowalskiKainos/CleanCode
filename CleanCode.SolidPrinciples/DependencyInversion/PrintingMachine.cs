@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.DependencyInversion
 {
-    class CopyingMachine
+    class PrintingMachine
     {
-        private Printer _printer;
+        private IPrinter _printer;
 
-        public CopyingMachine(Printer printer)
+        public PrintingMachine(IPrinter printer)
         {
             _printer = printer;
         }

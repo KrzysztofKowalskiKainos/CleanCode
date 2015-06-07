@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby: IPlayer, IMessage
+    public interface IMessage
     {
-        void AllIn();
-        void AllOut();
+        void MessageReceived(string player);
+        void Confirm(Request request);
+        Response Answer(Request request);
     }
 }

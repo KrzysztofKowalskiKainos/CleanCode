@@ -5,41 +5,35 @@ using System.Text;
 
 namespace CleanCode.Naming
 {
-    class Rect_Class
+    class Rectangular
     {
         // First side
-        private int _a;
+        private int width;
 
         // Second side
-        private int b;
-        private DateTime CDATE;
+        private int height;
+        private DateTime dateOfCreation;
 
-        public Rect_Class(int a, int B)
+        public Rectangular(int width, int height)
         {
-            _a = a;
-            b = B;
+            this.width = width;
+            this.height = height;
 
-            CDATE = DateTime.Now;
+            dateOfCreation = DateTime.Now;
         }
 
-        public int field()
+        public int GetArea()
         {
-            return _a * b;
+            return width * height;
         }
 
         // If duration should be in seconds
-        public int durationOfExistence(bool @is)
+        public int GetDurationOfExistence(TimeUnits unitOfTimeSpan)
         {
-            var d = (CDATE - DateTime.Now);
+            var durationOfExistence = (DateTime.Now - dateOfCreation);
+            var durationInUnits = typeof(TimeSpan).GetProperty("Total" + unitOfTimeSpan).GetValue(durationOfExistence);
 
-            if (@is)
-            {
-                return (int)d.TotalMilliseconds;
-            }
-            else
-            {
-                return (int)d.TotalSeconds;
-            }
+            return Convert.ToInt32(durationInUnits);
         }
     }
 }
