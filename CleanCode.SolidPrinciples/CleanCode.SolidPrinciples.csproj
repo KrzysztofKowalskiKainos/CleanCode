@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInversion\CopyingMachine.cs" />
+    <Compile Include="DependencyInversion\IPrintable.cs" />
     <Compile Include="DependencyInversion\Printer.cs" />
-    <Compile Include="InterfaceSegregation\ILobby.cs" />
+    <Compile Include="InterfaceSegregation\ILobbyAllPlayersActions.cs" />
+    <Compile Include="InterfaceSegregation\ILobbyMessageActions.cs" />
+    <Compile Include="InterfaceSegregation\ILobbySinglePlayerActions.cs" />
     <Compile Include="Liskov\Runner.cs" />
     <Compile Include="Liskov\TexasRanger.cs" />
     <Compile Include="Liskov\Walker.cs" />
@@ -53,7 +56,9 @@
     <Compile Include="OpenClosed\PlaceType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingleResponsibility\StringHolidaysUtils.cs" />
+    <Compile Include="SingleResponsibility\Laughter.cs" />
+    <Compile Include="SingleResponsibility\ReferencesCounter.cs" />
+    <Compile Include="SingleResponsibility\Holidays.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
