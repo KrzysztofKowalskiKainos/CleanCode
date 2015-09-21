@@ -6,27 +6,29 @@ using System.Threading.Tasks;
 
 namespace CleanCode.SolidPrinciples.InterfaceSegregation
 {
-    public interface ILobby
+    public interface IMoves
     {
         void AllIn();
-
-        void AddPlayer(string newPlayer);
-
-        void MessageReceived(string player);
-
-        IEnumerable<string> GetPlayerStatus(string player);
-
-        void Confirm(Request request);
-
-        Response Answer(Request request);
-
+        void AllOut();
+    }
+    public interface IPlayerTimers
+    {
         void PausePlayerTimer(string player);
 
         void RefreshPlayerTimer(string player);
+    }
+    public interface IPlayerAdministration
+    {
+        void AddPlayer(string newPlayer);
+        IEnumerable<string> GetPlayerStatus(string player);
+         void KickPlayer(string player);
+    }
+    public interface IPLayerCommunication
+    {
+        void MessageReceived(string player);
+        void Confirm(Request request);
+        Response Answer(Request request);
 
-        void KickPlayer(string player);
-
-        void AllOut();
     }
 
     public class Response { } 
